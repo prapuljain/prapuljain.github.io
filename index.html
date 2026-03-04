@@ -3,206 +3,979 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prapul Jain | AI Enthusiast & Builder</title>
+  <title>Prapul Jain A S — QA Analyst & AI Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-      min-height: 100vh;
+    :root {
+      --bg: #1C1F24;
+      --bg2: #22262D;
+      --bg3: #272B33;
+      --ember: #C96A4A;
+      --ember-light: #E07D5A;
+      --ember-dim: #8B4A33;
+      --ash: #9DA3AE;
+      --light: #E8EAF0;
+      --white: #F5F5F5;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--light);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* CUSTOM CURSOR */
+    .cursor {
+      width: 10px; height: 10px;
+      background: var(--ember);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.15s ease;
+      mix-blend-mode: screen;
+    }
+    .cursor-ring {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--ember);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transition: all 0.12s ease;
+      opacity: 0.5;
+    }
+
+    /* NOISE OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* NAV */
     nav {
-      padding: 20px 40px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #21262d;
+      background: linear-gradient(to bottom, rgba(28,31,36,0.95), transparent);
+      backdrop-filter: blur(8px);
     }
-    nav .logo { font-size: 1.3rem; font-weight: 700; color: #58a6ff; }
-    nav a { color: #8b949e; text-decoration: none; margin-left: 24px; font-size: 0.95rem; }
-    nav a:hover { color: #58a6ff; }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
-    .hero .badge {
-      display: inline-block;
-      background: #161b22;
-      border: 1px solid #30363d;
-      color: #58a6ff;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, #58a6ff, #bc8cff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #8b949e;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-    }
-    .hero .btns a {
-      display: inline-block;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 6px;
-      font-size: 0.95rem;
-      transition: 0.2s;
-    }
-    .btn-primary { background: #238636; color: #fff; border: 1px solid #2ea043; }
-    .btn-primary:hover { background: #2ea043; }
-    .btn-secondary { background: transparent; color: #58a6ff; border: 1px solid #30363d; }
-    .btn-secondary:hover { border-color: #58a6ff; }
-
-    .section { padding: 60px 40px; max-width: 900px; margin: 0 auto; }
-    .section h2 {
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 1.6rem;
-      margin-bottom: 32px;
-      color: #e6edf3;
-      border-left: 4px solid #58a6ff;
-      padding-left: 14px;
+      letter-spacing: 3px;
+      color: var(--ember);
     }
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a {
+      color: var(--ash);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--ember);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--ember); }
+    .nav-links a:hover::after { width: 100%; }
 
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card {
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 12px;
-      padding: 24px;
-      transition: 0.2s;
-    }
-    .card:hover { border-color: #58a6ff; transform: translateY(-4px); }
-    .card .icon { font-size: 2rem; margin-bottom: 12px; }
-    .card h3 { font-size: 1.1rem; margin-bottom: 8px; color: #e6edf3; }
-    .card p { color: #8b949e; font-size: 0.9rem; line-height: 1.6; }
-
-    .journey { display: flex; flex-direction: column; gap: 20px; }
-    .step {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .step .num {
-      background: #58a6ff;
-      color: #0d1117;
-      font-weight: 800;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
+    /* HERO */
+    .hero {
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 0.9rem;
+      padding: 120px 60px 60px;
+      position: relative;
+      overflow: hidden;
     }
-    .step h3 { color: #e6edf3; margin-bottom: 4px; }
-    .step p { color: #8b949e; font-size: 0.9rem; }
-    .done .num { background: #2ea043; }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,106,74,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 10% 80%, rgba(201,106,74,0.04) 0%, transparent 50%);
+    }
+    .hero-line {
+      position: absolute;
+      top: 0; bottom: 0;
+      right: 42%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--ember-dim), transparent);
+      opacity: 0.3;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--ember);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--ember);
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+    .hero h1 span { color: var(--ember); }
+    .hero-sub {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 3rem);
+      color: var(--ash);
+      letter-spacing: 4px;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.55s forwards;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--ash);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 48px;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.7s forwards;
+    }
+    .hero-desc strong { color: var(--ember); font-weight: 500; }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.85s forwards;
+    }
+    .btn-ember {
+      padding: 14px 32px;
+      background: var(--ember);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.2s;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+    .btn-ember:hover { background: var(--ember-light); transform: translateY(-2px); }
+    .btn-ghost {
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--ash);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 1px solid var(--bg3);
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--ember); color: var(--ember); }
 
-    .tools { display: flex; flex-wrap: wrap; gap: 12px; }
-    .tool {
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      color: #8b949e;
+    /* HERO STATS */
+    .hero-stats {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      opacity: 0;
+      animation: fadeLeft 0.8s ease 1s forwards;
+    }
+    .stat { text-align: right; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--ember);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ash);
     }
 
-    footer {
+    /* SCROLL INDICATOR */
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ash);
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1.2s forwards;
+    }
+    .scroll-line {
+      width: 40px; height: 1px;
+      background: var(--ember);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    /* SECTION BASE */
+    section { padding: 100px 60px; position: relative; }
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ember);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      width: 32px; height: 1px;
+      background: var(--ember);
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 60px;
+      line-height: 1;
+    }
+    .section-title span { color: var(--ember); }
+
+    /* EXPERIENCE */
+    #experience { background: var(--bg); }
+    .exp-grid { display: flex; flex-direction: column; gap: 2px; }
+    .exp-item {
+      background: var(--bg2);
+      border-left: 3px solid transparent;
+      padding: 36px 40px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,106,74,0.03), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .exp-item:hover {
+      border-left-color: var(--ember);
+      transform: translateX(4px);
+    }
+    .exp-item:hover::before { opacity: 1; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .exp-role {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: var(--white);
+    }
+    .exp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--ember);
+      letter-spacing: 1px;
+      background: rgba(201,106,74,0.1);
+      padding: 4px 12px;
+      border: 1px solid rgba(201,106,74,0.2);
+    }
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--ash);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .exp-bullets li {
+      font-size: 0.9rem;
+      color: var(--ash);
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+      font-weight: 300;
+    }
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--ember);
+      font-size: 0.8rem;
+    }
+    .exp-tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .exp-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      background: rgba(201,106,74,0.08);
+      color: var(--ember);
+      border: 1px solid rgba(201,106,74,0.15);
+      letter-spacing: 1px;
+    }
+
+    /* SKILLS */
+    #skills { background: var(--bg2); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+    }
+    .skill-card {
+      background: var(--bg);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .skill-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--ember);
+      transition: width 0.4s ease;
+    }
+    .skill-card:hover::after { width: 100%; }
+    .skill-card:hover { background: var(--bg3); }
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .skill-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .skill-desc {
+      font-size: 0.85rem;
+      color: var(--ash);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .skill-bar-wrap { margin-top: 16px; }
+    .skill-bar-bg {
+      height: 2px;
+      background: var(--bg3);
+      width: 100%;
+    }
+    .skill-bar {
+      height: 2px;
+      background: linear-gradient(to right, var(--ember-dim), var(--ember));
+      width: 0;
+      transition: width 1.2s ease;
+    }
+
+    /* ABOUT / JOURNEY */
+    #about { background: var(--bg); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--ash);
+      line-height: 1.9;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .about-text p strong { color: var(--ember); font-weight: 500; }
+    .about-text p em { color: var(--light); font-style: normal; }
+    .timeline { position: relative; padding-left: 24px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--ember), transparent);
+    }
+    .tl-item { position: relative; margin-bottom: 36px; }
+    .tl-dot {
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 8px; height: 8px;
+      background: var(--ember);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--ember);
+    }
+    .tl-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ember);
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+    .tl-title {
+      font-size: 0.95rem;
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .tl-desc {
+      font-size: 0.85rem;
+      color: var(--ash);
+      font-weight: 300;
+    }
+
+    /* EDUCATION */
+    #education { background: var(--bg2); }
+    .edu-card {
+      background: var(--bg);
+      padding: 48px;
+      border-left: 3px solid var(--ember);
+      position: relative;
+      max-width: 700px;
+    }
+    .edu-degree {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .edu-school {
+      font-size: 0.9rem;
+      color: var(--ember);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-family: 'DM Mono', monospace;
+    }
+    .edu-desc {
+      font-size: 0.9rem;
+      color: var(--ash);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .edu-year {
+      position: absolute;
+      top: 48px; right: 48px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      color: rgba(201,106,74,0.1);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    /* ACHIEVEMENTS */
+    #achievements { background: var(--bg); }
+    .ach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+    }
+    .ach-card {
+      background: var(--bg2);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .ach-card:hover { background: var(--bg3); }
+    .ach-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: rgba(201,106,74,0.12);
+      line-height: 1;
+      position: absolute;
+      top: 16px; right: 20px;
+      letter-spacing: 2px;
+    }
+    .ach-icon { font-size: 1.5rem; margin-bottom: 16px; }
+    .ach-title {
+      font-size: 0.95rem;
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .ach-source {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--ember);
+      letter-spacing: 1px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--bg2);
       text-align: center;
-      padding: 40px;
-      border-top: 1px solid #21262d;
-      color: #8b949e;
-      font-size: 0.9rem;
     }
-    footer a { color: #58a6ff; text-decoration: none; }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      letter-spacing: 4px;
+      color: var(--white);
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+    .contact-big span { color: var(--ember); }
+    .contact-sub {
+      font-size: 0.95rem;
+      color: var(--ash);
+      line-height: 1.8;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--bg);
+      border: 1px solid var(--bg3);
+      color: var(--ash);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+      font-family: 'DM Mono', monospace;
+    }
+    .contact-link:hover {
+      border-color: var(--ember);
+      color: var(--ember);
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg);
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(201,106,74,0.1);
+    }
+    footer .f-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      color: var(--ember);
+    }
+    footer .f-right {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ash);
+      letter-spacing: 1px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translate(30px, -50%); }
+      to { opacity: 1; transform: translate(0, -50%); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      .hero-stats { display: none; }
+      section { padding: 70px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+      .scroll-hint { left: 24px; }
+    }
   </style>
 </head>
 <body>
 
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
   <nav>
-    <div class="logo">Prapul Jain</div>
-    <div>
-      <a href="https://github.com/prapuljain" target="_blank">GitHub</a>
-      <a href="#journey">Journey</a>
-      <a href="#tools">Tools</a>
+    <div class="nav-logo">PJ</div>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">Journey</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <div class="badge">🚀 Manual Tester → AI Builder</div>
-    <h1>Hi, I'm Prapul Jain</h1>
-    <p>QA Tester turned AI Enthusiast on a mission to master Claude AI, build intelligent agents, and grow from zero to developer.</p>
-    <div class="btns">
-      <a href="https://github.com/prapuljain" target="_blank" class="btn-primary">View GitHub</a>
-      <a href="#journey" class="btn-secondary">My Journey</a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>What I'm Building Towards</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>AI Agents</h3>
-        <p>Building intelligent agents powered by Claude AI that automate real-world tasks.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🌐</div>
-        <h3>Websites</h3>
-        <p>Learning to design and deploy modern websites — starting with this one!</p>
-      </div>
-      <div class="card">
-        <div class="icon">🐍</div>
-        <h3>Python & Automation</h3>
-        <p>Using Python to automate tasks and connect AI tools together.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-line"></div>
+    <div class="hero-content">
+      <div class="hero-tag">QA Analyst · AI Enthusiast · Builder</div>
+      <h1>PRAPUL<br/><span>JAIN</span></h1>
+      <div class="hero-sub">A S</div>
+      <p class="hero-desc">
+        <strong>2+ years</strong> of ServiceNow QA experience — testing AI bots, automating regression suites, and breaking things before users do.<br/><br/>
+        Now on a mission to <em>master Claude AI, build intelligent agents</em>, and grow from Manual Tester to <strong>AI Builder</strong>.
+      </p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-ember">View Experience</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
       </div>
     </div>
-  </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">2+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Upgrade Cycles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Bugs Found</div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      SCROLL TO EXPLORE
+    </div>
+  </section>
 
-  <div class="section" id="journey">
-    <h2>My Learning Journey</h2>
-    <div class="journey">
-      <div class="step done">
-        <div class="num">✓</div>
-        <div>
-          <h3>Created GitHub Profile</h3>
-          <p>Set up my developer identity on GitHub — first step into the tech world.</p>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Career</div>
+    <div class="section-title">WORK <span>EXPERIENCE</span></div>
+    <div class="exp-grid">
+
+      <div class="exp-item reveal">
+        <div class="exp-header">
+          <div class="exp-role">Software Quality Assurance Analyst</div>
+          <div class="exp-date">OCT 2025 — PRESENT</div>
+        </div>
+        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
+        <ul class="exp-bullets">
+          <li>Led QA for a ServiceNow AI/Virtual Agent bot — covering P3/P4 incident creation, RITM creation, status tracking, and KB answer relevance including negative paths and fallback behavior.</li>
+          <li>Built and maintained ATF regression and smoke suites for Incident, Request, Change, and Problem with reusable steps and form/UI policy validations to stabilize releases.</li>
+          <li>Partnered with developers, integration engineers, and product owners to triage defects, clarify acceptance criteria, and secure UAT sign-offs with detailed Jira traceability.</li>
+          <li>Executed deployment sanity and post-release verification for AI bot and ITSM updates, documenting outcomes to support rapid rollback or hotfix decisions.</li>
+          <li>Worked on 3 ServiceNow upgrade testing cycles, validating functionality and ensuring smooth transitions across all ITSM modules.</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Virtual Agent</span>
+          <span class="exp-tag">ATF</span>
+          <span class="exp-tag">Regression</span>
+          <span class="exp-tag">UAT</span>
+          <span class="exp-tag">Jira</span>
         </div>
       </div>
-      <div class="step done">
-        <div class="num">✓</div>
-        <div>
-          <h3>Built My First Website</h3>
-          <p>Deployed this site on GitHub Pages — a real URL on the real internet!</p>
+
+      <div class="exp-item reveal">
+        <div class="exp-header">
+          <div class="exp-role">Associate SQA Analyst</div>
+          <div class="exp-date">AUG 2023 — OCT 2025</div>
+        </div>
+        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
+        <ul class="exp-bullets">
+          <li>Served as QA for integration stories between Jira and ServiceNow via IIB, validating synchronization, workflow triggers, and field mappings across Incident and Request.</li>
+          <li>Designed and executed ServiceNow test suites with clear data preparation, step-by-step validations, and consistent evidence capture for auditability.</li>
+          <li>Used Postman for API-level validation of ServiceNow endpoints — authentication, headers, query parameters, and error handling.</li>
+          <li>Applied ATF to automate repetitive checks on core forms, SLAs, and custom catalog items to increase coverage and reduce manual effort.</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Postman</span>
+          <span class="exp-tag">API Testing</span>
+          <span class="exp-tag">IIB Integration</span>
+          <span class="exp-tag">ITSM</span>
         </div>
       </div>
-      <div class="step">
-        <div class="num">3</div>
-        <div>
-          <h3>Learning Python Basics</h3>
-          <p>Variables, loops, functions — the foundation of all automation.</p>
+
+      <div class="exp-item reveal">
+        <div class="exp-header">
+          <div class="exp-role">Associate SQA Analyst — Intern</div>
+          <div class="exp-date">MAR 2023 — AUG 2023</div>
+        </div>
+        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
+        <ul class="exp-bullets">
+          <li>Created and managed test cases for ServiceNow workflows with strong documentation standards.</li>
+          <li>Learned test case organization, traceability, and documentation best practices in an enterprise environment.</li>
+          <li>Gained foundational knowledge of ServiceNow QA including ITSM and ATF.</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Test Cases</span>
+          <span class="exp-tag">Documentation</span>
+          <span class="exp-tag">ServiceNow</span>
         </div>
       </div>
-      <div class="step">
-        <div class="num">4</div>
-        <div>
-          <h3>Claude API & A
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">Expertise</div>
+    <div class="section-title">CORE <span>SKILLS</span></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">🧪</div>
+        <div class="skill-name">ServiceNow ITSM</div>
+        <div class="skill-desc">Incident, Problem, Change, Request, Catalog, Knowledge — deployment sanity and post-release validation.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">Automated Test Framework</div>
+        <div class="skill-desc">Micro-certified in ATF. Regression and smoke automation with reusable steps and assertions across core modules.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔌</div>
+        <div class="skill-name">Postman & API Testing</div>
+        <div class="skill-desc">Request/response validation, authentication, headers, error handling, and JSON payload checks for integrations.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🤖</div>
+        <div class="skill-name">Virtual Agent Testing</div>
+        <div class="skill-desc">Intents, dialog paths, fulfillment mapping, negative paths and fallback validation aligned to Now Assist.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="82"></div></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📋</div>
+        <div class="skill-name">Jira & Defect Tracking</div>
+        <div class="skill-desc">Managing defect lifecycle, sprint ceremonies, UAT coordination and sign-off facilitation.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="90"></div></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🚀</div>
+        <div class="skill-name">AI & Claude (Learning)</div>
+        <div class="skill-desc">Mastering Claude AI, prompt engineering, Python basics, and building toward AI agents and automation.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="40"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / JOURNEY -->
+  <section id="about">
+    <div class="section-label">Story</div>
+    <div class="section-title">MY <span>JOURNEY</span></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I started as a <strong>Manual QA Tester</strong> at Wolters Kluwer, learning the ropes of enterprise software testing on ServiceNow. What started as a job became a passion — <em>I love finding what breaks before anyone else does.</em></p>
+        <p>Over 2+ years I grew from intern to leading QA for an <strong>AI Virtual Agent bot</strong> — testing how AI thinks, responds, and fails. That's when I realized: <em>I don't just want to test AI. I want to build it.</em></p>
+        <p>Now I'm on a mission — learning <strong>Python, Claude API, GitHub</strong>, and everything it takes to go from Manual Tester to <strong>AI Builder</strong>. Every single day, 30 minutes at a time.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">MAR 2023</div>
+          <div class="tl-title">First day at Wolters Kluwer</div>
+          <div class="tl-desc">Started as QA intern — learned test documentation and ITSM fundamentals.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">AUG 2023</div>
+          <div class="tl-title">Promoted to Associate SQA Analyst</div>
+          <div class="tl-desc">Took on API testing, ATF automation, and Jira defect management.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">OCT 2025</div>
+          <div class="tl-title">Promoted to SQA Analyst</div>
+          <div class="tl-desc">Led QA for ServiceNow AI Virtual Agent bot — testing real AI in production.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">MAR 2026</div>
+          <div class="tl-title">Started AI Builder Journey</div>
+          <div class="tl-desc">Learning Python, Claude API, GitHub — building toward AI agents and products.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">FUTURE</div>
+          <div class="tl-title">AI Consultant & Builder</div>
+          <div class="tl-desc">Building AI agents, tools, and products that solve real problems. 🚀</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">Academic</div>
+    <div class="section-title">EDUCATION & <span>CERTS</span></div>
+    <div class="edu-card reveal">
+      <div class="edu-year">2023</div>
+      <div class="edu-degree">Bachelor of Engineering</div>
+      <div class="edu-school">Electronics & Instrumentation · Siddaganga Institute of Technology</div>
+      <div class="edu-desc">Completed BE in 2023 with a strong focus on IoT projects — including a smart foot pressure monitoring system for patient rehabilitation and an Arecanut plucking robot for agricultural automation. Built a foundation in systems thinking that directly applies to software testing and automation today.</div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-label">Recognition</div>
+    <div class="section-title">ACHIEVEMENTS & <span>CERTS</span></div>
+    <div class="ach-grid">
+      <div class="ach-card reveal">
+        <div class="ach-num">01</div>
+        <div class="ach-icon">🏆</div>
+        <div class="ach-title">ServiceNow Micro-Certification — ATF</div>
+        <div class="ach-source">ServiceNow University</div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-num">02</div>
+        <div class="ach-icon">📚</div>
+        <div class="ach-title">Foundational Courses — ServiceNow & ITSM</div>
+        <div class="ach-source">LinkedIn Learning</div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-num">03</div>
+        <div class="ach-icon">🤖</div>
+        <div class="ach-title">Built First Website & GitHub Profile</div>
+        <div class="ach-source">Self-taught · March 2026</div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-num">04</div>
+        <div class="ach-icon">⬆️</div>
+        <div class="ach-title">Promoted — Associate to SQA Analyst</div>
+        <div class="ach-source">Wolters Kluwer · October 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-label" style="justify-content:center">Let's Connect</div>
+      <div class="contact-big reveal">LET'S<br/><span>TALK</span></div>
+      <p class="contact-sub reveal">Whether it's a QA opportunity, AI collaboration, or just a conversation about building cool things — I'm always open.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:prapuljainas@gmail.com" class="contact-link">📧 prapuljainas@gmail.com</a>
+        <a href="https://github.com/prapuljain" target="_blank" class="contact-link">🐙 github.com/prapuljain</a>
+        <a href="https://linkedin.com/in/prapuljain-a-s" target="_blank" class="contact-link">💼 LinkedIn</a>
+        <a href="tel:+917026005185" class="contact-link">📱 +91 70260 05185</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-logo">PRAPUL JAIN A S</div>
+    <div class="f-right">BENGALURU, INDIA · QA ANALYST · AI BUILDER</div>
+  </footer>
+
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animCursor() {
+      cursor.style.left = mx - 5 + 'px';
+      cursor.style.top = my - 5 + 'px';
+      rx += (mx - rx) * 0.15;
+      ry += (my - ry) * 0.15;
+      ring.style.left = rx - 18 + 'px';
+      ring.style.top = ry - 18 + 'px';
+      requestAnimationFrame(animCursor);
+    }
+    animCursor();
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Skill bars
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.skill-bar').forEach(bar => {
+            bar.style.width = bar.dataset.width + '%';
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-card').forEach(c => barObserver.observe(c));
+  </script>
+</body>
+</html>

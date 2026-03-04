@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prapul Jain | AI Enthusiast & Builder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+    }
+    nav {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #21262d;
+    }
+    nav .logo { font-size: 1.3rem; font-weight: 700; color: #58a6ff; }
+    nav a { color: #8b949e; text-decoration: none; margin-left: 24px; font-size: 0.95rem; }
+    nav a:hover { color: #58a6ff; }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #58a6ff, #bc8cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #8b949e;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero .btns a {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 6px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .btn-primary { background: #238636; color: #fff; border: 1px solid #2ea043; }
+    .btn-primary:hover { background: #2ea043; }
+    .btn-secondary { background: transparent; color: #58a6ff; border: 1px solid #30363d; }
+    .btn-secondary:hover { border-color: #58a6ff; }
+
+    .section { padding: 60px 40px; max-width: 900px; margin: 0 auto; }
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 32px;
+      color: #e6edf3;
+      border-left: 4px solid #58a6ff;
+      padding-left: 14px;
+    }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 24px;
+      transition: 0.2s;
+    }
+    .card:hover { border-color: #58a6ff; transform: translateY(-4px); }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.1rem; margin-bottom: 8px; color: #e6edf3; }
+    .card p { color: #8b949e; font-size: 0.9rem; line-height: 1.6; }
+
+    .journey { display: flex; flex-direction: column; gap: 20px; }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .step .num {
+      background: #58a6ff;
+      color: #0d1117;
+      font-weight: 800;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+    .step h3 { color: #e6edf3; margin-bottom: 4px; }
+    .step p { color: #8b949e; font-size: 0.9rem; }
+    .done .num { background: #2ea043; }
+
+    .tools { display: flex; flex-wrap: wrap; gap: 12px; }
+    .tool {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #21262d;
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Prapul Jain</div>
+    <div>
+      <a href="https://github.com/prapuljain" target="_blank">GitHub</a>
+      <a href="#journey">Journey</a>
+      <a href="#tools">Tools</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="badge">🚀 Manual Tester → AI Builder</div>
+    <h1>Hi, I'm Prapul Jain</h1>
+    <p>QA Tester turned AI Enthusiast on a mission to master Claude AI, build intelligent agents, and grow from zero to developer.</p>
+    <div class="btns">
+      <a href="https://github.com/prapuljain" target="_blank" class="btn-primary">View GitHub</a>
+      <a href="#journey" class="btn-secondary">My Journey</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What I'm Building Towards</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Agents</h3>
+        <p>Building intelligent agents powered by Claude AI that automate real-world tasks.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Websites</h3>
+        <p>Learning to design and deploy modern websites — starting with this one!</p>
+      </div>
+      <div class="card">
+        <div class="icon">🐍</div>
+        <h3>Python & Automation</h3>
+        <p>Using Python to automate tasks and connect AI tools together.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="journey">
+    <h2>My Learning Journey</h2>
+    <div class="journey">
+      <div class="step done">
+        <div class="num">✓</div>
+        <div>
+          <h3>Created GitHub Profile</h3>
+          <p>Set up my developer identity on GitHub — first step into the tech world.</p>
+        </div>
+      </div>
+      <div class="step done">
+        <div class="num">✓</div>
+        <div>
+          <h3>Built My First Website</h3>
+          <p>Deployed this site on GitHub Pages — a real URL on the real internet!</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Learning Python Basics</h3>
+          <p>Variables, loops, functions — the foundation of all automation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div>
+          <h3>Claude API & A

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prapul Jain A S — QA Analyst & AI Enthusiast</title>
+  <title>Prapul Jain A S — Software Quality Engineer & AI-Driven Automation</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -77,8 +77,8 @@
     }
     .nav-logo {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 3px;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
       color: var(--ember);
     }
     .nav-links { display: flex; gap: 36px; }
@@ -287,64 +287,168 @@
 
     /* EXPERIENCE */
     #experience { background: var(--bg); }
-    .exp-grid { display: flex; flex-direction: column; gap: 2px; }
-    .exp-item {
-      background: var(--bg2);
-      border-left: 3px solid transparent;
-      padding: 36px 40px;
+
+    .exp-wrapper {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0;
+      position: relative;
+    }
+
+    /* Left sticky timeline */
+    .exp-timeline-col {
+      position: relative;
+      padding-top: 8px;
+    }
+    .exp-timeline-line {
+      position: absolute;
+      top: 16px; bottom: 0;
+      left: 24px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--ember), rgba(201,106,74,0.1));
+    }
+
+    .exp-tl-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 0;
+      cursor: pointer;
+      padding: 16px 0;
+    }
+    .exp-tl-dot-wrap { position: relative; flex-shrink: 0; width: 48px; display: flex; justify-content: center; }
+    .exp-tl-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--ember-dim);
+      background: var(--bg);
       transition: all 0.3s;
+      margin-top: 3px;
+      z-index: 2;
+      position: relative;
+    }
+    .exp-tl-entry.active .exp-tl-dot,
+    .exp-tl-entry:hover .exp-tl-dot {
+      background: var(--ember);
+      border-color: var(--ember);
+      box-shadow: 0 0 16px var(--ember);
+    }
+    .exp-tl-info { padding-right: 12px; }
+    .exp-tl-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--ember);
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .exp-tl-shortrole {
+      font-size: 0.78rem;
+      color: var(--ash);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .exp-tl-entry.active .exp-tl-shortrole,
+    .exp-tl-entry:hover .exp-tl-shortrole { color: var(--white); }
+
+    /* Right content panel */
+    .exp-content-col { padding-left: 20px; }
+
+    .exp-panel {
+      display: none;
+      animation: panelIn 0.4s ease forwards;
+    }
+    .exp-panel.active { display: block; }
+
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .exp-panel-inner {
+      background: var(--bg2);
+      border: 1px solid var(--bg3);
+      border-top: 3px solid var(--ember);
+      padding: 40px 44px;
       position: relative;
       overflow: hidden;
     }
-    .exp-item::before {
+    .exp-panel-inner::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(201,106,74,0.03), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
+      top: 0; right: 0;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(201,106,74,0.06), transparent 70%);
+      pointer-events: none;
     }
-    .exp-item:hover {
-      border-left-color: var(--ember);
-      transform: translateX(4px);
-    }
-    .exp-item:hover::before { opacity: 1; }
-    .exp-header {
+
+    .exp-panel-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       flex-wrap: wrap;
       gap: 12px;
     }
     .exp-role {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 2px;
+      font-size: 2rem;
+      letter-spacing: 3px;
       color: var(--white);
+      line-height: 1;
+    }
+    .exp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ember);
+      background: rgba(201,106,74,0.1);
+      border: 1px solid rgba(201,106,74,0.25);
+      padding: 5px 14px;
+      letter-spacing: 1px;
+    }
+    .exp-badge.promoted { color: #6fcf97; background: rgba(111,207,151,0.08); border-color: rgba(111,207,151,0.2); }
+
+    .exp-meta {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .exp-company-name {
+      font-size: 0.85rem;
+      color: var(--ember);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .exp-location {
+      font-size: 0.8rem;
+      color: var(--ash);
+      font-family: 'DM Mono', monospace;
     }
     .exp-date {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
-      color: var(--ember);
-      letter-spacing: 1px;
-      background: rgba(201,106,74,0.1);
-      padding: 4px 12px;
-      border: 1px solid rgba(201,106,74,0.2);
-    }
-    .exp-company {
-      font-size: 0.85rem;
       color: var(--ash);
       letter-spacing: 1px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
     }
-    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .exp-divider {
+      height: 1px;
+      background: linear-gradient(to right, var(--ember-dim), transparent);
+      margin-bottom: 28px;
+      opacity: 0.4;
+    }
+
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
     .exp-bullets li {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--ash);
-      line-height: 1.7;
-      padding-left: 20px;
+      line-height: 1.75;
+      padding-left: 24px;
       position: relative;
       font-weight: 300;
     }
@@ -353,18 +457,23 @@
       position: absolute;
       left: 0;
       color: var(--ember);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+      top: 2px;
     }
-    .exp-tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .exp-bullets li strong { color: var(--light); font-weight: 500; }
+
+    .exp-tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .exp-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      padding: 4px 10px;
-      background: rgba(201,106,74,0.08);
+      font-size: 0.68rem;
+      padding: 5px 12px;
+      background: rgba(201,106,74,0.07);
       color: var(--ember);
-      border: 1px solid rgba(201,106,74,0.15);
+      border: 1px solid rgba(201,106,74,0.18);
       letter-spacing: 1px;
+      transition: all 0.2s;
     }
+    .exp-tag:hover { background: rgba(201,106,74,0.15); }
 
     /* SKILLS */
     #skills { background: var(--bg2); }
@@ -638,13 +747,8 @@
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1 !important;
+      transform: none !important;
     }
 
     /* MOBILE */
@@ -659,6 +763,11 @@
       .scroll-hint { left: 24px; }
     }
   </style>
+  <style>
+    /* LOCAL FILE SAFETY - all content always visible */
+    .reveal, .exp-wrapper, .skill-card, .about-text, .timeline,
+    .edu-card, .ach-card { opacity: 1 !important; transform: none !important; }
+  </style>
 </head>
 <body>
 
@@ -667,7 +776,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">PJ</div>
+    <div class="nav-logo">PRAPULJAIN A S</div>
     <div class="nav-links">
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -682,12 +791,12 @@
     <div class="hero-bg"></div>
     <div class="hero-line"></div>
     <div class="hero-content">
-      <div class="hero-tag">QA Analyst · AI Enthusiast · Builder</div>
-      <h1>PRAPUL<br/><span>JAIN</span></h1>
+      <div class="hero-tag">Quality Engineer · AI-Driven Automation · Vibe Coder</div>
+      <h1>PRAPULJAIN<br/><span>A S</span></h1>
       <div class="hero-sub">A S</div>
       <p class="hero-desc">
-        <strong>2+ years</strong> of ServiceNow QA experience — testing AI bots, automating regression suites, and breaking things before users do.<br/><br/>
-        Now on a mission to <em>master Claude AI, build intelligent agents</em>, and grow from Manual Tester to <strong>AI Builder</strong>.
+        <strong>3 years</strong> of ServiceNow QA — from manual testing to building a <strong>Playwright automation framework</strong> for Teams-ServiceNow Now Assist integration.<br/><br/>
+        A <strong>Vibe Coder</strong> — using AI to automate the work that used to take hours. <em>Validated 30+ APIs. Built real automation. Ships things.</em>
       </p>
       <div class="hero-btns">
         <a href="#experience" class="btn-ember">View Experience</a>
@@ -696,16 +805,16 @@
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-num">2+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat">
         <div class="stat-num">3</div>
-        <div class="stat-label">Upgrade Cycles</div>
+        <div class="stat-label">Years QA</div>
       </div>
       <div class="stat">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">Bugs Found</div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">APIs Validated</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">120+</div>
+        <div class="stat-label">AI Prompts Automated</div>
       </div>
     </div>
     <div class="scroll-hint">
@@ -718,110 +827,175 @@
   <section id="experience">
     <div class="section-label">Career</div>
     <div class="section-title">WORK <span>EXPERIENCE</span></div>
-    <div class="exp-grid">
 
-      <div class="exp-item reveal">
-        <div class="exp-header">
-          <div class="exp-role">Software Quality Assurance Analyst</div>
-          <div class="exp-date">OCT 2025 — PRESENT</div>
+    <div class="exp-wrapper reveal">
+      <!-- Left: Timeline Nav -->
+      <div class="exp-timeline-col">
+        <div class="exp-timeline-line"></div>
+
+        <div class="exp-tl-entry active" onclick="switchExp(0, this)">
+          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+          <div class="exp-tl-info">
+            <div class="exp-tl-year">2025 — NOW</div>
+            <div class="exp-tl-shortrole">Quality Engineer</div>
+          </div>
         </div>
-        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
-        <ul class="exp-bullets">
-          <li>Led QA for a ServiceNow AI/Virtual Agent bot — covering P3/P4 incident creation, RITM creation, status tracking, and KB answer relevance including negative paths and fallback behavior.</li>
-          <li>Built and maintained ATF regression and smoke suites for Incident, Request, Change, and Problem with reusable steps and form/UI policy validations to stabilize releases.</li>
-          <li>Partnered with developers, integration engineers, and product owners to triage defects, clarify acceptance criteria, and secure UAT sign-offs with detailed Jira traceability.</li>
-          <li>Executed deployment sanity and post-release verification for AI bot and ITSM updates, documenting outcomes to support rapid rollback or hotfix decisions.</li>
-          <li>Worked on 3 ServiceNow upgrade testing cycles, validating functionality and ensuring smooth transitions across all ITSM modules.</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Virtual Agent</span>
-          <span class="exp-tag">ATF</span>
-          <span class="exp-tag">Regression</span>
-          <span class="exp-tag">UAT</span>
-          <span class="exp-tag">Jira</span>
+
+        <div class="exp-tl-entry" onclick="switchExp(1, this)">
+          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+          <div class="exp-tl-info">
+            <div class="exp-tl-year">2023 — 2025</div>
+            <div class="exp-tl-shortrole">Assoc. Quality Engineer</div>
+          </div>
+        </div>
+
+        <div class="exp-tl-entry" onclick="switchExp(2, this)">
+          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+          <div class="exp-tl-info">
+            <div class="exp-tl-year">2023</div>
+            <div class="exp-tl-shortrole">QA Intern</div>
+          </div>
         </div>
       </div>
 
-      <div class="exp-item reveal">
-        <div class="exp-header">
-          <div class="exp-role">Associate SQA Analyst</div>
-          <div class="exp-date">AUG 2023 — OCT 2025</div>
-        </div>
-        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
-        <ul class="exp-bullets">
-          <li>Served as QA for integration stories between Jira and ServiceNow via IIB, validating synchronization, workflow triggers, and field mappings across Incident and Request.</li>
-          <li>Designed and executed ServiceNow test suites with clear data preparation, step-by-step validations, and consistent evidence capture for auditability.</li>
-          <li>Used Postman for API-level validation of ServiceNow endpoints — authentication, headers, query parameters, and error handling.</li>
-          <li>Applied ATF to automate repetitive checks on core forms, SLAs, and custom catalog items to increase coverage and reduce manual effort.</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Postman</span>
-          <span class="exp-tag">API Testing</span>
-          <span class="exp-tag">IIB Integration</span>
-          <span class="exp-tag">ITSM</span>
-        </div>
-      </div>
+      <!-- Right: Content Panels -->
+      <div class="exp-content-col">
 
-      <div class="exp-item reveal">
-        <div class="exp-header">
-          <div class="exp-role">Associate SQA Analyst — Intern</div>
-          <div class="exp-date">MAR 2023 — AUG 2023</div>
+        <!-- Panel 0 -->
+        <div class="exp-panel active" id="exp-0">
+          <div class="exp-panel-inner">
+            <div class="exp-panel-top">
+              <div class="exp-role">Software Quality Engineer</div>
+              <div class="exp-badge promoted">⬆ Promoted</div>
+            </div>
+            <div class="exp-meta">
+              <div class="exp-company-name">Wolters Kluwer</div>
+              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+              <div class="exp-date">OCT 2025 — PRESENT</div>
+            </div>
+            <div class="exp-divider"></div>
+            <ul class="exp-bullets">
+              <li>Led quality engineering for <strong>ServiceNow AI / Virtual Agent (Now Assist) bot</strong> — 20+ dialog flows covering P3/P4 incident creation, RITM creation, status tracking, KB answer relevance, negative paths, and fallback behavior.</li>
+              <li>Designed and executed a <strong>Playwright (Python) automation framework</strong> for the Teams-ServiceNow Now Assist integration — automates login, chat interaction, fires 120+ prompts, captures response times, screenshots every step, and exports results to CSV for performance benchmarking across releases.</li>
+              <li>Validated <strong>30+ ServiceNow API endpoints</strong> using Postman with AI-assisted validation — used ChatGPT and Claude AI to generate edge case scenarios, assertion logic, and test scripts across authentication, headers, JSON payloads, and error handling.</li>
+              <li>Used <strong>GitHub Copilot and Rovo (Jira)</strong> as AI co-pilots for test case generation, defect triage, and automation scripting — reducing test authoring time across sprint cycles.</li>
+              <li>Built and maintained <strong>ATF regression & smoke suites</strong> — 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</li>
+              <li>Executed <strong>3 ServiceNow upgrade testing cycles</strong> and secured UAT sign-offs with detailed Jira traceability and deployment sanity verification.</li>
+            </ul>
+            <div class="exp-tag-row">
+              <span class="exp-tag">Playwright</span>
+              <span class="exp-tag">Now Assist</span>
+              <span class="exp-tag">30+ APIs</span>
+              <span class="exp-tag">GitHub Copilot</span>
+              <span class="exp-tag">Rovo</span>
+              <span class="exp-tag">ATF</span>
+              <span class="exp-tag">ChatGPT</span>
+              <span class="exp-tag">Claude AI</span>
+            </div>
+          </div>
         </div>
-        <div class="exp-company">Wolters Kluwer · Chennai, Tamil Nadu</div>
-        <ul class="exp-bullets">
-          <li>Created and managed test cases for ServiceNow workflows with strong documentation standards.</li>
-          <li>Learned test case organization, traceability, and documentation best practices in an enterprise environment.</li>
-          <li>Gained foundational knowledge of ServiceNow QA including ITSM and ATF.</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Test Cases</span>
-          <span class="exp-tag">Documentation</span>
-          <span class="exp-tag">ServiceNow</span>
-        </div>
-      </div>
 
+        <!-- Panel 1 -->
+        <div class="exp-panel" id="exp-1">
+          <div class="exp-panel-inner">
+            <div class="exp-panel-top">
+              <div class="exp-role">Associate Quality Engineer</div>
+              <div class="exp-badge">2 Years</div>
+            </div>
+            <div class="exp-meta">
+              <div class="exp-company-name">Wolters Kluwer</div>
+              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+              <div class="exp-date">AUG 2023 — OCT 2025</div>
+            </div>
+            <div class="exp-divider"></div>
+            <ul class="exp-bullets">
+              <li>Quality Engineer for <strong>Jira ↔ ServiceNow integration</strong> via IIB — validated field mappings, workflow triggers, and sync across Incident and Request for 2 major integration projects.</li>
+              <li>Used <strong>Postman for API-level validation</strong> of ServiceNow endpoints — authentication, headers, query parameters, and error handling for integrations and catalog items.</li>
+              <li>Applied <strong>ATF to automate repetitive checks</strong> on core forms, SLAs, and custom catalog items, reducing manual regression effort by ~35% across release cycles.</li>
+              <li>Designed structured <strong>test suites</strong> with clear data preparation, step-by-step validations, and consistent evidence capture for auditability.</li>
+              <li>Coordinated UAT with stakeholders; led deployment sanity and post-release checks; logged defects in Jira with reproducible steps and artefacts.</li>
+            </ul>
+            <div class="exp-tag-row">
+              <span class="exp-tag">Postman</span>
+              <span class="exp-tag">API Testing</span>
+              <span class="exp-tag">IIB Integration</span>
+              <span class="exp-tag">ATF</span>
+              <span class="exp-tag">ITSM</span>
+              <span class="exp-tag">UAT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="exp-panel" id="exp-2">
+          <div class="exp-panel-inner">
+            <div class="exp-panel-top">
+              <div class="exp-role">Associate Quality Engineer — Intern</div>
+              <div class="exp-badge">Where It Started</div>
+            </div>
+            <div class="exp-meta">
+              <div class="exp-company-name">Wolters Kluwer</div>
+              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+              <div class="exp-date">MAR 2023 — AUG 2023</div>
+            </div>
+            <div class="exp-divider"></div>
+            <ul class="exp-bullets">
+              <li>Created and managed <strong>test cases for ServiceNow workflows</strong> with strong documentation standards and clear traceability.</li>
+              <li>Learned test case organization, traceability, and <strong>documentation best practices</strong> in an enterprise environment.</li>
+              <li>Gained foundational knowledge of <strong>ServiceNow QA</strong> including ITSM and ATF — the base of everything that followed.</li>
+            </ul>
+            <div class="exp-tag-row">
+              <span class="exp-tag">Test Cases</span>
+              <span class="exp-tag">Documentation</span>
+              <span class="exp-tag">ServiceNow</span>
+              <span class="exp-tag">ITSM Basics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="section-label">Expertise</div>
-    <div class="section-title">CORE <span>SKILLS</span></div>
+    <div class="section-label">What I Do</div>
+    <div class="section-title">AUTOMATION & <span>QA SKILLS</span></div>
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <div class="skill-icon">🧪</div>
-        <div class="skill-name">ServiceNow ITSM</div>
-        <div class="skill-desc">Incident, Problem, Change, Request, Catalog, Knowledge — deployment sanity and post-release validation.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
+        <div class="skill-icon">🎭</div>
+        <div class="skill-name">Playwright Automation</div>
+        <div class="skill-desc">Built a Python Playwright framework for Teams-ServiceNow Now Assist — automates login, chat, 12+ AI prompts, records response times, screenshots, and exports to CSV for performance analysis.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="75"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">⚡</div>
-        <div class="skill-name">Automated Test Framework</div>
-        <div class="skill-desc">Micro-certified in ATF. Regression and smoke automation with reusable steps and assertions across core modules.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
+        <div class="skill-name">ATF & Regression Automation</div>
+        <div class="skill-desc">Micro-certified. Built ATF suites covering 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🔌</div>
         <div class="skill-name">Postman & API Testing</div>
-        <div class="skill-desc">Request/response validation, authentication, headers, error handling, and JSON payload checks for integrations.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
+        <div class="skill-desc">Validated 30+ ServiceNow API endpoints. Uses AI to generate test scripts, edge cases, and validation logic inside Postman collections.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🤖</div>
-        <div class="skill-name">Virtual Agent Testing</div>
-        <div class="skill-desc">Intents, dialog paths, fulfillment mapping, negative paths and fallback validation aligned to Now Assist.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="82"></div></div></div>
+        <div class="skill-name">Virtual Agent / Now Assist QA</div>
+        <div class="skill-desc">Led QA for ServiceNow Now Assist bot — 20+ dialog flows, incident creation, status tracking, KB validation, catalog suggestions, negative paths and fallback testing.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-icon">📋</div>
-        <div class="skill-name">Jira & Defect Tracking</div>
-        <div class="skill-desc">Managing defect lifecycle, sprint ceremonies, UAT coordination and sign-off facilitation.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="90"></div></div></div>
+        <div class="skill-icon">🐍</div>
+        <div class="skill-name">Python Fundamentals</div>
+        <div class="skill-desc">Variables, loops, functions, conditionals — applied directly to real automation scripts. Not just tutorials — used in the Playwright framework that runs in production testing.</div>
+        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="50"></div></div></div>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-icon">🚀</div>
-        <div class="skill-name">AI & Claude (Learning)</div>
-        <div class="skill-desc">Mastering Claude AI, prompt engineering, Python basics, and building toward AI agents and automation.</div>
+        <div class="skill-icon">🎯</div>
+        <div class="skill-name">Vibe Coder</div>
+        <div class="skill-desc">Uses AI as a co-pilot to build automation tools. Designed a framework running 120+ automated prompts for Now Assist performance testing. Built and deployed portfolio website in under 10 minutes using AI.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="40"></div></div></div>
       </div>
     </div>
@@ -833,40 +1007,40 @@
     <div class="section-title">MY <span>JOURNEY</span></div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>I started as a <strong>Manual QA Tester</strong> at Wolters Kluwer, learning the ropes of enterprise software testing on ServiceNow. What started as a job became a passion — <em>I love finding what breaks before anyone else does.</em></p>
-        <p>Over 2+ years I grew from intern to leading QA for an <strong>AI Virtual Agent bot</strong> — testing how AI thinks, responds, and fails. That's when I realized: <em>I don't just want to test AI. I want to build it.</em></p>
-        <p>Now I'm on a mission — learning <strong>Python, Claude API, GitHub</strong>, and everything it takes to go from Manual Tester to <strong>AI Builder</strong>. Every single day, 30 minutes at a time.</p>
+        <p>Started as a <strong>Manual QA Tester</strong> — writing test cases, validating workflows, finding bugs before users did. Good work. But slow and repetitive.</p>
+        <p>The shift happened when I built a <strong>Playwright (Python) framework</strong> for the Teams-ServiceNow Now Assist integration — automating login, chat interaction, firing 12+ AI prompts, capturing response times, screenshots, and exporting everything to CSV. What used to take hours of manual testing now runs automatically.</p>
+        <p>I also used <strong>AI to validate 30+ APIs in Postman</strong> — generating edge cases and scripts faster than writing them manually. The pattern is simple: <em>3 years of knowing exactly what needs testing, plus AI to build the tools that do it.</em></p>
       </div>
       <div class="timeline reveal">
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-year">MAR 2023</div>
-          <div class="tl-title">First day at Wolters Kluwer</div>
-          <div class="tl-desc">Started as QA intern — learned test documentation and ITSM fundamentals.</div>
+          <div class="tl-title">Started as QA Intern</div>
+          <div class="tl-desc">First step into enterprise QA — manual testing, documentation, ITSM fundamentals.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-year">AUG 2023</div>
-          <div class="tl-title">Promoted to Associate SQA Analyst</div>
-          <div class="tl-desc">Took on API testing, ATF automation, and Jira defect management.</div>
+          <div class="tl-title">Associate Quality Engineer</div>
+          <div class="tl-desc">API testing with Postman, ATF automation, Jira defect management across real projects.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-year">OCT 2025</div>
-          <div class="tl-title">Promoted to SQA Analyst</div>
-          <div class="tl-desc">Led QA for ServiceNow AI Virtual Agent bot — testing real AI in production.</div>
+          <div class="tl-title">Promoted → Quality Engineer</div>
+          <div class="tl-desc">Led QA for ServiceNow AI Virtual Agent bot — first hands-on experience testing real AI in production.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-year">MAR 2026</div>
-          <div class="tl-title">Started AI Builder Journey</div>
-          <div class="tl-desc">Learning Python, Claude API, GitHub — building toward AI agents and products.</div>
+          <div class="tl-title">Manual Tester → AI Builder</div>
+          <div class="tl-desc">Started building AI agents with Claude — automating the tasks that once took hours of manual effort.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-year">FUTURE</div>
-          <div class="tl-title">AI Consultant & Builder</div>
-          <div class="tl-desc">Building AI agents, tools, and products that solve real problems. 🚀</div>
+          <div class="tl-year">NEXT</div>
+          <div class="tl-title">Ship AI Automation Tools 🚀</div>
+          <div class="tl-desc">Building agents that make day-to-day work effortless — for QA teams, businesses, and beyond.</div>
         </div>
       </div>
     </div>
@@ -910,7 +1084,7 @@
       <div class="ach-card reveal">
         <div class="ach-num">04</div>
         <div class="ach-icon">⬆️</div>
-        <div class="ach-title">Promoted — Associate to SQA Analyst</div>
+        <div class="ach-title">Promoted — Associate to Quality Engineer</div>
         <div class="ach-source">Wolters Kluwer · October 2025</div>
       </div>
     </div>
@@ -921,11 +1095,11 @@
     <div class="contact-inner">
       <div class="section-label" style="justify-content:center">Let's Connect</div>
       <div class="contact-big reveal">LET'S<br/><span>TALK</span></div>
-      <p class="contact-sub reveal">Whether it's a QA opportunity, AI collaboration, or just a conversation about building cool things — I'm always open.</p>
+      <p class="contact-sub reveal">3 years in QA. Now building AI agents that automate the boring stuff. Whether it's a collaboration, opportunity, or just a conversation about making work smarter — I'm in.</p>
       <div class="contact-links reveal">
-        <a href="mailto:prapuljainas@gmail.com" class="contact-link">📧 prapuljainas@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#96e6e4f7e6e3fafcf7fff8f7e5d6f1fbf7fffab8f5f9fb" class="contact-link">📧 <span class="__cf_email__" data-cfemail="2050524150554c4a41494e415360474d41494c0e434f4d">[email&#160;protected]</span></a>
         <a href="https://github.com/prapuljain" target="_blank" class="contact-link">🐙 github.com/prapuljain</a>
-        <a href="https://linkedin.com/in/prapuljain-a-s" target="_blank" class="contact-link">💼 LinkedIn</a>
+        <a href="https://linkedin.com/in/prapuljain" target="_blank" class="contact-link">💼 LinkedIn</a>
         <a href="tel:+917026005185" class="contact-link">📱 +91 70260 05185</a>
       </div>
     </div>
@@ -934,10 +1108,18 @@
   <!-- FOOTER -->
   <footer>
     <div class="f-logo">PRAPUL JAIN A S</div>
-    <div class="f-right">BENGALURU, INDIA · QA ANALYST · AI BUILDER</div>
+    <div class="f-right">BENGALURU, INDIA · 3 YRS · SERVICENOW QUALITY ENGINEER</div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Experience tab switcher
+    function switchExp(index, el) {
+      document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.exp-tl-entry').forEach(e => e.classList.remove('active'));
+      document.getElementById('exp-' + index).classList.add('active');
+      el.classList.add('active');
+    }
+
     // Custom cursor
     const cursor = document.getElementById('cursor');
     const ring = document.getElementById('cursorRing');
@@ -954,28 +1136,10 @@
     }
     animCursor();
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
+    // All content visible by default - no animation dependency
 
     // Skill bars
     const barObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-bar').forEach(bar => {
-            bar.style.width = bar.dataset.width + '%';
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.skill-card').forEach(c => barObserver.observe(c));
-  </script>
-</body>
-</html>
+          entry.target.querySelectorAll('.skill-ba

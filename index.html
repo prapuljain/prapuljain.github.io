@@ -31,25 +31,42 @@
     }
 
     /* CUSTOM CURSOR */
-    .cursor {
-      width: 10px; height: 10px;
-      background: var(--ember);
+    html, body, * { cursor: none !important; }
+    #cursor {
+      width: 14px;
+      height: 14px;
+      background: #C96A4A;
       border-radius: 50%;
       position: fixed;
+      top: 0; left: 0;
       pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.15s ease;
-      mix-blend-mode: screen;
+      z-index: 999999;
+      opacity: 0;
+      will-change: transform;
+      box-shadow: 0 0 12px #C96A4A, 0 0 24px rgba(201,106,74,0.7), 0 0 40px rgba(201,106,74,0.3);
+      transition: opacity 0.3s, width 0.15s, height 0.15s;
     }
-    .cursor-ring {
-      width: 36px; height: 36px;
-      border: 1.5px solid var(--ember);
+    #cursor.active { opacity: 1; }
+    #cursor.big { width: 22px; height: 22px; background: #E07D5A; }
+    #cursorRing {
+      width: 44px;
+      height: 44px;
+      border: 2px solid #C96A4A;
       border-radius: 50%;
       position: fixed;
+      top: 0; left: 0;
       pointer-events: none;
-      z-index: 9998;
-      transition: all 0.12s ease;
-      opacity: 0.5;
+      z-index: 999998;
+      opacity: 0;
+      will-change: transform;
+      transition: opacity 0.3s, width 0.25s, height 0.25s;
+      animation: ringPulse 2s ease-in-out infinite;
+    }
+    #cursorRing.active { opacity: 0.65; }
+    #cursorRing.big { width: 62px; height: 62px; opacity: 0.3; }
+    @keyframes ringPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,106,74,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(201,106,74,0); }
     }
 
     /* NOISE OVERLAY */
@@ -793,7 +810,7 @@
     <div class="hero-content">
       <div class="hero-tag">Quality Engineer · AI-Driven Automation · Vibe Coder</div>
       <h1>PRAPULJAIN<br/><span>A S</span></h1>
-      <div class="hero-sub">A S</div>
+      <div class="hero-sub">QA ENGINEER → AI AUTOMATOR</div>
       <p class="hero-desc">
         <strong>3 years</strong> of ServiceNow QA — from manual testing to building a <strong>Playwright automation framework</strong> for Teams-ServiceNow Now Assist integration.<br/><br/>
         A <strong>Vibe Coder</strong> — using AI to automate the work that used to take hours. <em>Validated 30+ APIs. Built real automation. Ships things.</em>
@@ -1120,21 +1137,53 @@
       el.classList.add('active');
     }
 
-    // Custom cursor
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-    function animCursor() {
-      cursor.style.left = mx - 5 + 'px';
-      cursor.style.top = my - 5 + 'px';
-      rx += (mx - rx) * 0.15;
-      ry += (my - ry) * 0.15;
-      ring.style.left = rx - 18 + 'px';
-      ring.style.top = ry - 18 + 'px';
-      requestAnimationFrame(animCursor);
+    // ── CUSTOM CURSOR ──────────────────────────────────────────
+    const cursor  = document.getElementById('cursor');
+    const ring    = document.getElementById('cursorRing');
+
+    let mouseX = -200, mouseY = -200;
+    let ringX  = -200, ringY  = -200;
+    let ticking = false;
+
+    // Show cursor only after first real mouse movement
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursor.classList.add('active');
+      ring.classList.add('active');
+
+      // Dot snaps immediately
+      cursor.style.transform = `translate(${mouseX - 7}px, ${mouseY - 7}px)`;
+
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(moveRing);
+      }
+    }, { passive: true });
+
+    // Hide when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      cursor.classList.remove('active');
+      ring.classList.remove('active');
+    });
+
+    // Ring lags smoothly behind
+    function moveRing() {
+      ringX += (mouseX - ringX) * 0.10;
+      ringY += (mouseY - ringY) * 0.10;
+      ring.style.transform = `translate(${ringX - 22}px, ${ringY - 22}px)`;
+      ticking = false;
+      if (Math.abs(mouseX - ringX) > 0.5 || Math.abs(mouseY - ringY) > 0.5) {
+        ticking = true;
+        requestAnimationFrame(moveRing);
+      }
     }
-    animCursor();
+
+    // Hover expand effect
+    document.querySelectorAll('a, button, .exp-tl-entry, .skill-card, .ach-card, .btn-ember, .btn-ghost').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('big'); ring.classList.add('big'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('big'); ring.classList.remove('big'); });
+    });
 
     // All content visible by default - no animation dependency
 

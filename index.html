@@ -3,8 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prapul Jain A S — Software Quality Engineer & AI-Driven Automation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <title>Prapuljain A S — Software Quality Engineer | ServiceNow | Playwright Automation</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
+  <!-- SEO Meta -->
+  <meta name="description" content="Prapuljain A S — Software Quality Engineer with 3+ years of ServiceNow ITSM expertise. Playwright automation framework, 30+ APIs validated, 120+ AI prompts automated. AI-driven QA specialist based in Bengaluru, India."/>
+  <meta name="keywords" content="ServiceNow QA, Software Quality Engineer, Playwright Automation, ATF, Now Assist, API Testing, ITSM, Test Automation, AI-driven QA, Bengaluru"/>
+  <meta name="author" content="Prapuljain A S"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#C96A4A"/>
+  <meta name="msapplication-TileColor" content="#1C1F24"/>
+  <link rel="canonical" href="https://prapuljain.github.io/"/>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+  <!-- Open Graph / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://prapuljain.github.io/"/>
+  <meta property="og:title" content="Prapuljain A S — Software Quality Engineer | ServiceNow | Playwright"/>
+  <meta property="og:description" content="3 years of ServiceNow QA. Playwright automation. 30+ APIs validated. 120+ AI prompts automated. Building AI-driven quality engineering tools."/>
+  <meta property="og:site_name" content="Prapuljain A S Portfolio"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Prapuljain A S — Software Quality Engineer"/>
+  <meta name="twitter:description" content="ServiceNow QA | Playwright Automation | AI-Driven Testing | Bengaluru"/>
+
+  <!-- Performance: Font preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
   <style>
     :root {
       --bg: #1C1F24;
@@ -13,12 +45,58 @@
       --ember: #C96A4A;
       --ember-light: #E07D5A;
       --ember-dim: #8B4A33;
-      --ash: #9DA3AE;
-      --light: #E8EAF0;
+      --ash: #C4CAD4;
+      --light: #F0F2F6;
       --white: #F5F5F5;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--ember);
+      color: white;
+      padding: 8px 16px;
+      z-index: 99999;
+      font-size: 0.85rem;
+      border-radius: 0 0 4px 4px;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── FOCUS STATES (keyboard navigation) ── */
+    :focus-visible {
+      outline: 2px solid var(--ember);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .btn-ember:focus-visible,
+    .btn-ghost:focus-visible {
+      outline: 2px solid var(--ember);
+      outline-offset: 4px;
+    }
+    .exp-tl-entry:focus-visible {
+      outline: 2px solid var(--ember);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--ember);
+      outline-offset: 3px;
+    }
+    /* Remove default button styles for tab buttons */
+    button.exp-tl-entry {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      color: inherit;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+    }
+
 
     html { scroll-behavior: smooth; }
 
@@ -31,42 +109,27 @@
     }
 
     /* CUSTOM CURSOR */
-    html, body, * { cursor: none !important; }
-    #cursor {
-      width: 14px;
-      height: 14px;
-      background: #C96A4A;
+    .cursor {
+      width: 10px; height: 10px;
+      background: var(--ember);
       border-radius: 50%;
       position: fixed;
       top: 0; left: 0;
       pointer-events: none;
-      z-index: 999999;
-      opacity: 0;
+      z-index: 9999;
       will-change: transform;
-      box-shadow: 0 0 12px #C96A4A, 0 0 24px rgba(201,106,74,0.7), 0 0 40px rgba(201,106,74,0.3);
-      transition: opacity 0.3s, width 0.15s, height 0.15s;
+      mix-blend-mode: screen;
     }
-    #cursor.active { opacity: 1; }
-    #cursor.big { width: 22px; height: 22px; background: #E07D5A; }
-    #cursorRing {
-      width: 44px;
-      height: 44px;
-      border: 2px solid #C96A4A;
+    .cursor-ring {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--ember);
       border-radius: 50%;
       position: fixed;
       top: 0; left: 0;
       pointer-events: none;
-      z-index: 999998;
-      opacity: 0;
+      z-index: 9998;
       will-change: transform;
-      transition: opacity 0.3s, width 0.25s, height 0.25s;
-      animation: ringPulse 2s ease-in-out infinite;
-    }
-    #cursorRing.active { opacity: 0.65; }
-    #cursorRing.big { width: 62px; height: 62px; opacity: 0.3; }
-    @keyframes ringPulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(201,106,74,0.5); }
-      50%       { box-shadow: 0 0 0 12px rgba(201,106,74,0); }
+      opacity: 0.5;
     }
 
     /* NOISE OVERLAY */
@@ -785,24 +848,52 @@
     .reveal, .exp-wrapper, .skill-card, .about-text, .timeline,
     .edu-card, .ach-card { opacity: 1 !important; transform: none !important; }
   </style>
+
+  <!-- Structured Data: Person schema for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prapuljain A S",
+    "jobTitle": "Software Quality Engineer",
+    "description": "Software Quality Engineer with 3 years of ServiceNow ITSM expertise, Playwright automation, and AI-driven QA.",
+    "url": "https://prapuljain.github.io",
+    "email": "prapuljainas@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/prapuljain",
+      "https://github.com/prapuljain"
+    ],
+    "knowsAbout": ["ServiceNow", "Quality Engineering", "Playwright", "ATF", "API Testing", "Test Automation", "Now Assist", "ITSM"]
+  }
+  </script>
 </head>
 <body>
+<a href="#experience" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- NAV -->
-  <nav>
+  <header>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="nav-logo">PRAPULJAIN A S</div>
     <div class="nav-links">
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">Journey</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+      <a href="#experience" aria-label="Go to Work Experience section">Experience</a>
+      <a href="#skills" aria-label="Go to Skills section">Skills</a>
+      <a href="#about" aria-label="Go to Career Journey section">Journey</a>
+      <a href="#education" aria-label="Go to Education section">Education</a>
+      <a href="#contact" aria-label="Go to Contact section">Contact</a>
     </div>
   </nav>
+  </header>
 
+  <main id="main-content">
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
@@ -810,14 +901,13 @@
     <div class="hero-content">
       <div class="hero-tag">Quality Engineer · AI-Driven Automation · Vibe Coder</div>
       <h1>PRAPULJAIN<br/><span>A S</span></h1>
-      <div class="hero-sub">QA ENGINEER → AI AUTOMATOR</div>
       <p class="hero-desc">
         <strong>3 years</strong> of ServiceNow QA — from manual testing to building a <strong>Playwright automation framework</strong> for Teams-ServiceNow Now Assist integration.<br/><br/>
         A <strong>Vibe Coder</strong> — using AI to automate the work that used to take hours. <em>Validated 30+ APIs. Built real automation. Ships things.</em>
       </p>
       <div class="hero-btns">
-        <a href="#experience" class="btn-ember">View Experience</a>
-        <a href="#contact" class="btn-ghost">Get In Touch</a>
+        <a href="#experience" class="btn-ember" aria-label="View my work experience">View Experience</a>
+        <a href="#contact" class="btn-ghost" aria-label="Go to contact section">Get In Touch</a>
       </div>
     </div>
     <div class="hero-stats">
@@ -841,48 +931,48 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience">
+  <section id="experience" aria-label="Work Experience">
     <div class="section-label">Career</div>
-    <div class="section-title">WORK <span>EXPERIENCE</span></div>
+    <h2 class="section-title">WORK <span>EXPERIENCE</span></h2>
 
     <div class="exp-wrapper reveal">
       <!-- Left: Timeline Nav -->
-      <div class="exp-timeline-col">
+      <div class="exp-timeline-col" role="tablist" aria-label="Work experience timeline">
         <div class="exp-timeline-line"></div>
 
-        <div class="exp-tl-entry active" onclick="switchExp(0, this)">
+        <button class="exp-tl-entry active" onclick="switchExp(0, this)" aria-selected="true" role="tab" aria-controls="exp-0" tabindex="0">
           <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
           <div class="exp-tl-info">
             <div class="exp-tl-year">2025 — NOW</div>
             <div class="exp-tl-shortrole">Quality Engineer</div>
           </div>
-        </div>
+        </button>
 
-        <div class="exp-tl-entry" onclick="switchExp(1, this)">
+        <button class="exp-tl-entry" onclick="switchExp(1, this)" aria-selected="false" role="tab" aria-controls="exp-1" tabindex="0">
           <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
           <div class="exp-tl-info">
             <div class="exp-tl-year">2023 — 2025</div>
             <div class="exp-tl-shortrole">Assoc. Quality Engineer</div>
           </div>
-        </div>
+        </button>
 
-        <div class="exp-tl-entry" onclick="switchExp(2, this)">
+        <button class="exp-tl-entry" onclick="switchExp(2, this)" aria-selected="false" role="tab" aria-controls="exp-2" tabindex="0">
           <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
           <div class="exp-tl-info">
             <div class="exp-tl-year">2023</div>
             <div class="exp-tl-shortrole">QA Intern</div>
           </div>
-        </div>
+        </button>
       </div>
 
       <!-- Right: Content Panels -->
       <div class="exp-content-col">
 
         <!-- Panel 0 -->
-        <div class="exp-panel active" id="exp-0">
-          <div class="exp-panel-inner">
+        <div class="exp-panel active" id="exp-0" role="tabpanel" aria-labelledby="tab-0">
+          <article class="exp-panel-inner" aria-label="Software Quality Engineer at Wolters Kluwer">
             <div class="exp-panel-top">
-              <div class="exp-role">Software Quality Engineer</div>
+              <h3 class="exp-role">Software Quality Engineer</h3>
               <div class="exp-badge promoted">⬆ Promoted</div>
             </div>
             <div class="exp-meta">
@@ -909,14 +999,14 @@
               <span class="exp-tag">ChatGPT</span>
               <span class="exp-tag">Claude AI</span>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Panel 1 -->
-        <div class="exp-panel" id="exp-1">
-          <div class="exp-panel-inner">
+        <div class="exp-panel" id="exp-1" role="tabpanel" aria-labelledby="tab-1">
+          <article class="exp-panel-inner" aria-label="Associate Quality Engineer at Wolters Kluwer">
             <div class="exp-panel-top">
-              <div class="exp-role">Associate Quality Engineer</div>
+              <h3 class="exp-role">Associate Quality Engineer</h3>
               <div class="exp-badge">2 Years</div>
             </div>
             <div class="exp-meta">
@@ -940,14 +1030,14 @@
               <span class="exp-tag">ITSM</span>
               <span class="exp-tag">UAT</span>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Panel 2 -->
-        <div class="exp-panel" id="exp-2">
-          <div class="exp-panel-inner">
+        <div class="exp-panel" id="exp-2" role="tabpanel" aria-labelledby="tab-2">
+          <article class="exp-panel-inner" aria-label="QA Intern at Wolters Kluwer">
             <div class="exp-panel-top">
-              <div class="exp-role">Associate Quality Engineer — Intern</div>
+              <h3 class="exp-role">Associate Quality Engineer — Intern</h3>
               <div class="exp-badge">Where It Started</div>
             </div>
             <div class="exp-meta">
@@ -967,7 +1057,7 @@
               <span class="exp-tag">ServiceNow</span>
               <span class="exp-tag">ITSM Basics</span>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
@@ -975,43 +1065,43 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills">
+  <section id="skills" aria-label="Skills and Technologies">
     <div class="section-label">What I Do</div>
-    <div class="section-title">AUTOMATION & <span>QA SKILLS</span></div>
+    <h2 class="section-title">AUTOMATION & <span>QA SKILLS</span></h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-icon">🎭</div>
-        <div class="skill-name">Playwright Automation</div>
-        <div class="skill-desc">Built a Python Playwright framework for Teams-ServiceNow Now Assist — automates login, chat, 12+ AI prompts, records response times, screenshots, and exports to CSV for performance analysis.</div>
+        <h3 class="skill-name">Playwright Automation</h3>
+        <div class="skill-desc">Built a Python Playwright framework for Teams-ServiceNow Now Assist — automates login, chat, 120+ AI prompts, records response times, screenshots, and exports to CSV for performance analysis.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="75"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">⚡</div>
-        <div class="skill-name">ATF & Regression Automation</div>
+        <h3 class="skill-name">ATF & Regression Automation</h3>
         <div class="skill-desc">Micro-certified. Built ATF suites covering 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🔌</div>
-        <div class="skill-name">Postman & API Testing</div>
+        <h3 class="skill-name">Postman & API Testing</h3>
         <div class="skill-desc">Validated 30+ ServiceNow API endpoints. Uses AI to generate test scripts, edge cases, and validation logic inside Postman collections.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🤖</div>
-        <div class="skill-name">Virtual Agent / Now Assist QA</div>
+        <h3 class="skill-name">Virtual Agent / Now Assist QA</h3>
         <div class="skill-desc">Led QA for ServiceNow Now Assist bot — 20+ dialog flows, incident creation, status tracking, KB validation, catalog suggestions, negative paths and fallback testing.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🐍</div>
-        <div class="skill-name">Python Fundamentals</div>
+        <h3 class="skill-name">Python Fundamentals</h3>
         <div class="skill-desc">Variables, loops, functions, conditionals — applied directly to real automation scripts. Not just tutorials — used in the Playwright framework that runs in production testing.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="50"></div></div></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon">🎯</div>
-        <div class="skill-name">Vibe Coder</div>
+        <h3 class="skill-name">Vibe Coder</h3>
         <div class="skill-desc">Uses AI as a co-pilot to build automation tools. Designed a framework running 120+ automated prompts for Now Assist performance testing. Built and deployed portfolio website in under 10 minutes using AI.</div>
         <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="40"></div></div></div>
       </div>
@@ -1019,13 +1109,13 @@
   </section>
 
   <!-- ABOUT / JOURNEY -->
-  <section id="about">
+  <section id="about" aria-label="About and Career Journey">
     <div class="section-label">Story</div>
-    <div class="section-title">MY <span>JOURNEY</span></div>
+    <h2 class="section-title">MY <span>JOURNEY</span></h2>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>Started as a <strong>Manual QA Tester</strong> — writing test cases, validating workflows, finding bugs before users did. Good work. But slow and repetitive.</p>
-        <p>The shift happened when I built a <strong>Playwright (Python) framework</strong> for the Teams-ServiceNow Now Assist integration — automating login, chat interaction, firing 12+ AI prompts, capturing response times, screenshots, and exporting everything to CSV. What used to take hours of manual testing now runs automatically.</p>
+        <p>The shift happened when I built a <strong>Playwright (Python) framework</strong> for the Teams-ServiceNow Now Assist integration — automating login, chat interaction, firing 120+ AI prompts, capturing response times, screenshots, and exporting everything to CSV. What used to take hours of manual testing now runs automatically.</p>
         <p>I also used <strong>AI to validate 30+ APIs in Postman</strong> — generating edge cases and scripts faster than writing them manually. The pattern is simple: <em>3 years of knowing exactly what needs testing, plus AI to build the tools that do it.</em></p>
       </div>
       <div class="timeline reveal">
@@ -1064,9 +1154,9 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education">
+  <section id="education" aria-label="Education and Certifications">
     <div class="section-label">Academic</div>
-    <div class="section-title">EDUCATION & <span>CERTS</span></div>
+    <h2 class="section-title">EDUCATION & <span>CERTS</span></h2>
     <div class="edu-card reveal">
       <div class="edu-year">2023</div>
       <div class="edu-degree">Bachelor of Engineering</div>
@@ -1108,87 +1198,79 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" aria-label="Contact Information">
     <div class="contact-inner">
       <div class="section-label" style="justify-content:center">Let's Connect</div>
-      <div class="contact-big reveal">LET'S<br/><span>TALK</span></div>
+      
       <p class="contact-sub reveal">3 years in QA. Now building AI agents that automate the boring stuff. Whether it's a collaboration, opportunity, or just a conversation about making work smarter — I'm in.</p>
       <div class="contact-links reveal">
-        <a href="/cdn-cgi/l/email-protection#96e6e4f7e6e3fafcf7fff8f7e5d6f1fbf7fffab8f5f9fb" class="contact-link">📧 <span class="__cf_email__" data-cfemail="2050524150554c4a41494e415360474d41494c0e434f4d">[email&#160;protected]</span></a>
-        <a href="https://github.com/prapuljain" target="_blank" class="contact-link">🐙 github.com/prapuljain</a>
-        <a href="https://linkedin.com/in/prapuljain" target="_blank" class="contact-link">💼 LinkedIn</a>
+        <a href="/cdn-cgi/l/email-protection#a6d6d4c7d6d3caccc7cfc8c7d5e6c1cbc7cfca88c5c9cb" class="contact-link" aria-label="Send email to Prapuljain">📧 <span class="__cf_email__" data-cfemail="c4b4b6a5b4b1a8aea5adaaa5b784a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a>
+        <a href="https://github.com/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Prapuljain GitHub profile">🐙 github.com/prapuljain</a>
+        <a href="https://linkedin.com/in/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Prapuljain LinkedIn profile">💼 linkedin.com/in/prapuljain</a>
         <a href="tel:+917026005185" class="contact-link">📱 +91 70260 05185</a>
       </div>
     </div>
   </section>
 
+  </main>
   <!-- FOOTER -->
   <footer>
     <div class="f-logo">PRAPUL JAIN A S</div>
-    <div class="f-right">BENGALURU, INDIA · 3 YRS · SERVICENOW QUALITY ENGINEER</div>
+    <div class="f-right">BENGALURU, INDIA · SOFTWARE QUALITY ENGINEER · prapuljain.github.io</div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Experience tab switcher
     function switchExp(index, el) {
       document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.exp-tl-entry').forEach(e => e.classList.remove('active'));
+      document.querySelectorAll('.exp-tl-entry').forEach(e => {
+        e.classList.remove('active');
+        e.setAttribute('aria-selected', 'false');
+      });
       document.getElementById('exp-' + index).classList.add('active');
       el.classList.add('active');
+      el.setAttribute('aria-selected', 'true');
     }
-
-    // ── CUSTOM CURSOR ──────────────────────────────────────────
-    const cursor  = document.getElementById('cursor');
-    const ring    = document.getElementById('cursorRing');
-
-    let mouseX = -200, mouseY = -200;
-    let ringX  = -200, ringY  = -200;
-    let ticking = false;
-
-    // Show cursor only after first real mouse movement
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursor.classList.add('active');
-      ring.classList.add('active');
-
-      // Dot snaps immediately
-      cursor.style.transform = `translate(${mouseX - 7}px, ${mouseY - 7}px)`;
-
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(moveRing);
-      }
-    }, { passive: true });
-
-    // Hide when mouse leaves window
-    document.addEventListener('mouseleave', () => {
-      cursor.classList.remove('active');
-      ring.classList.remove('active');
+    // Keyboard navigation for tabs
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.exp-tl-entry');
+      tabs.forEach((tab, i) => {
+        tab.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = tabs[(i + 1) % tabs.length];
+            next.focus();
+            switchExp((i + 1) % tabs.length, next);
+          }
+          if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = tabs[(i - 1 + tabs.length) % tabs.length];
+            prev.focus();
+            switchExp((i - 1 + tabs.length) % tabs.length, prev);
+          }
+        });
+      });
     });
 
-    // Ring lags smoothly behind
-    function moveRing() {
-      ringX += (mouseX - ringX) * 0.10;
-      ringY += (mouseY - ringY) * 0.10;
-      ring.style.transform = `translate(${ringX - 22}px, ${ringY - 22}px)`;
-      ticking = false;
-      if (Math.abs(mouseX - ringX) > 0.5 || Math.abs(mouseY - ringY) > 0.5) {
-        ticking = true;
-        requestAnimationFrame(moveRing);
+    // Custom cursor — only on non-touch devices
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursor = document.getElementById('cursor');
+      const ring = document.getElementById('cursorRing');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+      function animCursor() {
+        cursor.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
+        rx += (mx - rx) * 0.15;
+        ry += (my - ry) * 0.15;
+        ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
+        requestAnimationFrame(animCursor);
       }
+      animCursor();
+    } else {
+      // Hide custom cursor on touch devices
+      document.getElementById('cursor').style.display = 'none';
+      document.getElementById('cursorRing').style.display = 'none';
+      document.body.style.cursor = 'auto';
     }
 
-    // Hover expand effect
-    document.querySelectorAll('a, button, .exp-tl-entry, .skill-card, .ach-card, .btn-ember, .btn-ghost').forEach(el => {
-      el.addEventListener('mouseenter', () => { cursor.classList.add('big'); ring.classList.add('big'); });
-      el.addEventListener('mouseleave', () => { cursor.classList.remove('big'); ring.classList.remove('big'); });
-    });
-
-    // All content visible by default - no animation dependency
-
-    // Skill bars
-    const barObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-ba
+    // All conten

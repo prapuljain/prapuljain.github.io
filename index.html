@@ -3,36 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prapuljain A S — Software Quality Engineer | ServiceNow | Playwright Automation</title>
-
-  <!-- Security Headers -->
+  <title>Prapuljain A S — Software Quality Engineer | ServiceNow | Playwright | CI/CD Automation</title>
   <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
-  <!-- SEO Meta -->
-  <meta name="description" content="Prapuljain A S — Software Quality Engineer with 3+ years of ServiceNow ITSM expertise. Playwright automation framework, 30+ APIs validated, 120+ AI prompts automated. AI-driven QA specialist based in Bengaluru, India."/>
-  <meta name="keywords" content="ServiceNow QA, Software Quality Engineer, Playwright Automation, ATF, Now Assist, API Testing, ITSM, Test Automation, AI-driven QA, Bengaluru"/>
+  <meta name="description" content="Prapuljain A S — Software Quality Engineer with 3+ years of ServiceNow ITSM expertise. Playwright automation framework, Azure DevOps CI/CD pipelines, 30+ APIs validated, 120+ AI prompts automated. AI-driven QA specialist based in Bengaluru, India."/>
+  <meta name="keywords" content="ServiceNow QA, Software Quality Engineer, Playwright Automation, ATF, Now Assist, API Testing, ITSM, Test Automation, AI-driven QA, Azure DevOps, CI/CD, GitHub, UAT Testing, Smoke Testing, Bengaluru"/>
   <meta name="author" content="Prapuljain A S"/>
   <meta name="robots" content="index, follow"/>
   <meta name="theme-color" content="#C96A4A"/>
   <meta name="msapplication-TileColor" content="#1C1F24"/>
   <link rel="canonical" href="https://prapuljain.github.io/"/>
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-
-  <!-- Open Graph / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://prapuljain.github.io/"/>
-  <meta property="og:title" content="Prapuljain A S — Software Quality Engineer | ServiceNow | Playwright"/>
-  <meta property="og:description" content="3 years of ServiceNow QA. Playwright automation. 30+ APIs validated. 120+ AI prompts automated. Building AI-driven quality engineering tools."/>
+  <meta property="og:title" content="Prapuljain A S — Software Quality Engineer | ServiceNow | CI/CD | Playwright"/>
+  <meta property="og:description" content="3 years of ServiceNow QA. Playwright automation. Azure DevOps pipelines. 30+ APIs validated. 120+ AI prompts automated. Building AI-driven quality engineering tools."/>
   <meta property="og:site_name" content="Prapuljain A S Portfolio"/>
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:title" content="Prapuljain A S — Software Quality Engineer"/>
-  <meta name="twitter:description" content="ServiceNow QA | Playwright Automation | AI-Driven Testing | Bengaluru"/>
-
-  <!-- Performance: Font preconnect -->
+  <meta name="twitter:description" content="ServiceNow QA | Playwright Automation | Azure DevOps CI/CD | AI-Driven Testing | Bengaluru"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
@@ -49,1228 +39,549 @@
       --light: #F0F2F6;
       --white: #F5F5F5;
     }
-
     .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 16px;
-      background: var(--ember);
-      color: white;
-      padding: 8px 16px;
-      z-index: 99999;
-      font-size: 0.85rem;
-      border-radius: 0 0 4px 4px;
+      position: absolute; top: -100px; left: 16px;
+      background: var(--ember); color: white;
+      padding: 8px 16px; z-index: 99999;
+      font-size: 0.85rem; border-radius: 0 0 4px 4px;
       transition: top 0.2s;
     }
     .skip-link:focus { top: 0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    /* ── FOCUS STATES (keyboard navigation) ── */
-    :focus-visible {
-      outline: 2px solid var(--ember);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-    .btn-ember:focus-visible,
-    .btn-ghost:focus-visible {
-      outline: 2px solid var(--ember);
-      outline-offset: 4px;
-    }
-    .exp-tl-entry:focus-visible {
-      outline: 2px solid var(--ember);
-      outline-offset: 4px;
-      border-radius: 4px;
-    }
-    a:focus-visible {
-      outline: 2px solid var(--ember);
-      outline-offset: 3px;
-    }
-    /* Remove default button styles for tab buttons */
-    button.exp-tl-entry {
-      background: none;
-      border: none;
-      padding: 0;
-      font: inherit;
-      color: inherit;
-      text-align: left;
-      width: 100%;
-      cursor: pointer;
-    }
-
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 2px; }
+    .btn-ember:focus-visible, .btn-ghost:focus-visible { outline: 2px solid var(--ember); outline-offset: 4px; }
+    .exp-tl-entry:focus-visible { outline: 2px solid var(--ember); outline-offset: 4px; border-radius: 4px; }
+    a:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+    button.exp-tl-entry { background: none; border: none; padding: 0; font: inherit; color: inherit; text-align: left; width: 100%; cursor: pointer; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--light);
-      overflow-x: hidden;
-      cursor: none;
-    }
-
-    /* CUSTOM CURSOR */
-    .cursor {
-      width: 10px; height: 10px;
-      background: var(--ember);
-      border-radius: 50%;
-      position: fixed;
-      top: 0; left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      will-change: transform;
-      mix-blend-mode: screen;
-    }
-    .cursor-ring {
-      width: 36px; height: 36px;
-      border: 1.5px solid var(--ember);
-      border-radius: 50%;
-      position: fixed;
-      top: 0; left: 0;
-      pointer-events: none;
-      z-index: 9998;
-      will-change: transform;
-      opacity: 0.5;
-    }
-
-    /* NOISE OVERLAY */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 1000;
-      opacity: 0.4;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(to bottom, rgba(28,31,36,0.95), transparent);
-      backdrop-filter: blur(8px);
-    }
-    .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      color: var(--ember);
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--light); overflow-x: hidden; cursor: none; }
+    .cursor { width: 10px; height: 10px; background: var(--ember); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; will-change: transform; mix-blend-mode: screen; }
+    .cursor-ring { width: 36px; height: 36px; border: 1.5px solid var(--ember); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; will-change: transform; opacity: 0.5; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(28,31,36,0.95), transparent); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: var(--ember); }
     .nav-links { display: flex; gap: 36px; }
-    .nav-links a {
-      color: var(--ash);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: color 0.2s;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 1px;
-      background: var(--ember);
-      transition: width 0.3s;
-    }
+    .nav-links a { color: var(--ash); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; transition: color 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--ember); transition: width 0.3s; }
     .nav-links a:hover { color: var(--ember); }
     .nav-links a:hover::after { width: 100%; }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 120px 60px 60px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(201,106,74,0.08) 0%, transparent 60%),
-                  radial-gradient(ellipse at 10% 80%, rgba(201,106,74,0.04) 0%, transparent 50%);
-    }
-    .hero-line {
-      position: absolute;
-      top: 0; bottom: 0;
-      right: 42%;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent, var(--ember-dim), transparent);
-      opacity: 0.3;
-    }
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 60px 60px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(201,106,74,0.08) 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, rgba(201,106,74,0.04) 0%, transparent 50%); }
+    .hero-line { position: absolute; top: 0; bottom: 0; right: 42%; width: 1px; background: linear-gradient(to bottom, transparent, var(--ember-dim), transparent); opacity: 0.3; }
     .hero-content { position: relative; z-index: 2; max-width: 700px; }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--ember);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.2s forwards;
-    }
-    .hero-tag::before {
-      content: '';
-      width: 24px; height: 1px;
-      background: var(--ember);
-    }
-    .hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(4rem, 9vw, 8rem);
-      line-height: 0.9;
-      letter-spacing: 2px;
-      color: var(--white);
-      margin-bottom: 8px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.4s forwards;
-    }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--ember); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+    .hero-tag::before { content: ''; width: 24px; height: 1px; background: var(--ember); }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.9; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; }
     .hero h1 span { color: var(--ember); }
-    .hero-sub {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.5rem, 3.5vw, 3rem);
-      color: var(--ash);
-      letter-spacing: 4px;
-      margin-bottom: 32px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.55s forwards;
-    }
-    .hero-desc {
-      font-size: 1rem;
-      color: var(--ash);
-      line-height: 1.8;
-      max-width: 520px;
-      margin-bottom: 48px;
-      font-weight: 300;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.7s forwards;
-    }
+    .hero-sub { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.5rem, 3.5vw, 3rem); color: var(--ash); letter-spacing: 4px; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.55s forwards; }
+    .hero-desc { font-size: 1rem; color: var(--ash); line-height: 1.8; max-width: 520px; margin-bottom: 48px; font-weight: 300; opacity: 0; animation: fadeUp 0.8s ease 0.7s forwards; }
     .hero-desc strong { color: var(--ember); font-weight: 500; }
-    .hero-btns {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.85s forwards;
-    }
-    .btn-ember {
-      padding: 14px 32px;
-      background: var(--ember);
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      transition: all 0.2s;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease 0.85s forwards; }
+    .btn-ember { padding: 14px 32px; background: var(--ember); color: var(--white); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: all 0.2s; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
     .btn-ember:hover { background: var(--ember-light); transform: translateY(-2px); }
-    .btn-ghost {
-      padding: 14px 32px;
-      background: transparent;
-      color: var(--ash);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      border: 1px solid var(--bg3);
-      transition: all 0.2s;
-    }
+    .btn-ghost { padding: 14px 32px; background: transparent; color: var(--ash); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; border: 1px solid var(--bg3); transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--ember); color: var(--ember); }
-
-    /* HERO STATS */
-    .hero-stats {
-      position: absolute;
-      right: 60px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      opacity: 0;
-      animation: fadeLeft 0.8s ease 1s forwards;
-    }
+    .hero-stats { position: absolute; right: 60px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 40px; opacity: 0; animation: fadeLeft 0.8s ease 1s forwards; }
     .stat { text-align: right; }
-    .stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3rem;
-      color: var(--ember);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--ash);
-    }
-
-    /* SCROLL INDICATOR */
-    .scroll-hint {
-      position: absolute;
-      bottom: 40px;
-      left: 60px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ash);
-      letter-spacing: 2px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 1.2s forwards;
-    }
-    .scroll-line {
-      width: 40px; height: 1px;
-      background: var(--ember);
-      animation: scrollPulse 2s ease infinite;
-    }
-
-    /* SECTION BASE */
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--ember); line-height: 1; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--ash); }
+    .scroll-hint { position: absolute; bottom: 40px; left: 60px; display: flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ash); letter-spacing: 2px; opacity: 0; animation: fadeUp 0.8s ease 1.2s forwards; }
+    .scroll-line { width: 40px; height: 1px; background: var(--ember); animation: scrollPulse 2s ease infinite; }
     section { padding: 100px 60px; position: relative; }
-    .section-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ember);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .section-label::before {
-      content: '';
-      width: 32px; height: 1px;
-      background: var(--ember);
-    }
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      letter-spacing: 2px;
-      color: var(--white);
-      margin-bottom: 60px;
-      line-height: 1;
-    }
+    .section-label { display: flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ember); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+    .section-label::before { content: ''; width: 32px; height: 1px; background: var(--ember); }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 2px; color: var(--white); margin-bottom: 60px; line-height: 1; }
     .section-title span { color: var(--ember); }
-
-    /* EXPERIENCE */
     #experience { background: var(--bg); }
-
-    .exp-wrapper {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 0;
-      position: relative;
-    }
-
-    /* Left sticky timeline */
-    .exp-timeline-col {
-      position: relative;
-      padding-top: 8px;
-    }
-    .exp-timeline-line {
-      position: absolute;
-      top: 16px; bottom: 0;
-      left: 24px;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--ember), rgba(201,106,74,0.1));
-    }
-
-    .exp-tl-entry {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 0;
-      cursor: pointer;
-      padding: 16px 0;
-    }
+    .exp-wrapper { display: grid; grid-template-columns: 200px 1fr; gap: 0; position: relative; }
+    .exp-timeline-col { position: relative; padding-top: 8px; }
+    .exp-timeline-line { position: absolute; top: 16px; bottom: 0; left: 24px; width: 1px; background: linear-gradient(to bottom, var(--ember), rgba(201,106,74,0.1)); }
+    .exp-tl-entry { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 0; cursor: pointer; padding: 16px 0; }
     .exp-tl-dot-wrap { position: relative; flex-shrink: 0; width: 48px; display: flex; justify-content: center; }
-    .exp-tl-dot {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      border: 2px solid var(--ember-dim);
-      background: var(--bg);
-      transition: all 0.3s;
-      margin-top: 3px;
-      z-index: 2;
-      position: relative;
-    }
-    .exp-tl-entry.active .exp-tl-dot,
-    .exp-tl-entry:hover .exp-tl-dot {
-      background: var(--ember);
-      border-color: var(--ember);
-      box-shadow: 0 0 16px var(--ember);
-    }
+    .exp-tl-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--ember-dim); background: var(--bg); transition: all 0.3s; margin-top: 3px; z-index: 2; position: relative; }
+    .exp-tl-entry.active .exp-tl-dot, .exp-tl-entry:hover .exp-tl-dot { background: var(--ember); border-color: var(--ember); box-shadow: 0 0 16px var(--ember); }
     .exp-tl-info { padding-right: 12px; }
-    .exp-tl-year {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--ember);
-      letter-spacing: 1px;
-      margin-bottom: 3px;
-    }
-    .exp-tl-shortrole {
-      font-size: 0.78rem;
-      color: var(--ash);
-      line-height: 1.4;
-      transition: color 0.2s;
-    }
-    .exp-tl-entry.active .exp-tl-shortrole,
-    .exp-tl-entry:hover .exp-tl-shortrole { color: var(--white); }
-
-    /* Right content panel */
+    .exp-tl-year { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--ember); letter-spacing: 1px; margin-bottom: 3px; }
+    .exp-tl-shortrole { font-size: 0.78rem; color: var(--ash); line-height: 1.4; transition: color 0.2s; }
+    .exp-tl-entry.active .exp-tl-shortrole, .exp-tl-entry:hover .exp-tl-shortrole { color: var(--white); }
     .exp-content-col { padding-left: 20px; }
-
-    .exp-panel {
-      display: none;
-      animation: panelIn 0.4s ease forwards;
-    }
+    .exp-panel { display: none; animation: panelIn 0.4s ease forwards; }
     .exp-panel.active { display: block; }
-
-    @keyframes panelIn {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .exp-panel-inner {
-      background: var(--bg2);
-      border: 1px solid var(--bg3);
-      border-top: 3px solid var(--ember);
-      padding: 40px 44px;
-      position: relative;
-      overflow: hidden;
-    }
-    .exp-panel-inner::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 200px; height: 200px;
-      background: radial-gradient(circle, rgba(201,106,74,0.06), transparent 70%);
-      pointer-events: none;
-    }
-
-    .exp-panel-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 6px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .exp-role {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 3px;
-      color: var(--white);
-      line-height: 1;
-    }
-    .exp-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ember);
-      background: rgba(201,106,74,0.1);
-      border: 1px solid rgba(201,106,74,0.25);
-      padding: 5px 14px;
-      letter-spacing: 1px;
-    }
+    @keyframes panelIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .exp-panel-inner { background: var(--bg2); border: 1px solid var(--bg3); border-top: 3px solid var(--ember); padding: 40px 44px; position: relative; overflow: hidden; }
+    .exp-panel-inner::before { content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,106,74,0.06), transparent 70%); pointer-events: none; }
+    .exp-panel-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; flex-wrap: wrap; gap: 12px; }
+    .exp-role { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 3px; color: var(--white); line-height: 1; }
+    .exp-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ember); background: rgba(201,106,74,0.1); border: 1px solid rgba(201,106,74,0.25); padding: 5px 14px; letter-spacing: 1px; }
     .exp-badge.promoted { color: #6fcf97; background: rgba(111,207,151,0.08); border-color: rgba(111,207,151,0.2); }
-
-    .exp-meta {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-    .exp-company-name {
-      font-size: 0.85rem;
-      color: var(--ember);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-    .exp-location {
-      font-size: 0.8rem;
-      color: var(--ash);
-      font-family: 'DM Mono', monospace;
-    }
-    .exp-date {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--ash);
-      letter-spacing: 1px;
-    }
-
-    .exp-divider {
-      height: 1px;
-      background: linear-gradient(to right, var(--ember-dim), transparent);
-      margin-bottom: 28px;
-      opacity: 0.4;
-    }
-
+    .exp-meta { display: flex; gap: 24px; align-items: center; margin-bottom: 28px; flex-wrap: wrap; }
+    .exp-company-name { font-size: 0.85rem; color: var(--ember); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+    .exp-location { font-size: 0.8rem; color: var(--ash); font-family: 'DM Mono', monospace; }
+    .exp-date { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--ash); letter-spacing: 1px; }
+    .exp-divider { height: 1px; background: linear-gradient(to right, var(--ember-dim), transparent); margin-bottom: 28px; opacity: 0.4; }
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
-    .exp-bullets li {
-      font-size: 0.92rem;
-      color: var(--ash);
-      line-height: 1.75;
-      padding-left: 24px;
-      position: relative;
-      font-weight: 300;
-    }
-    .exp-bullets li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--ember);
-      font-size: 0.85rem;
-      top: 2px;
-    }
+    .exp-bullets li { font-size: 0.92rem; color: var(--ash); line-height: 1.75; padding-left: 24px; position: relative; font-weight: 300; }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--ember); font-size: 0.85rem; top: 2px; }
     .exp-bullets li strong { color: var(--light); font-weight: 500; }
-
     .exp-tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
-    .exp-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      padding: 5px 12px;
-      background: rgba(201,106,74,0.07);
-      color: var(--ember);
-      border: 1px solid rgba(201,106,74,0.18);
-      letter-spacing: 1px;
-      transition: all 0.2s;
-    }
+    .exp-tag { font-family: 'DM Mono', monospace; font-size: 0.68rem; padding: 5px 12px; background: rgba(201,106,74,0.07); color: var(--ember); border: 1px solid rgba(201,106,74,0.18); letter-spacing: 1px; transition: all 0.2s; }
     .exp-tag:hover { background: rgba(201,106,74,0.15); }
-
-    /* SKILLS */
     #skills { background: var(--bg2); }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2px;
-    }
-    .skill-card {
-      background: var(--bg);
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s;
-    }
-    .skill-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      height: 2px;
-      width: 0;
-      background: var(--ember);
-      transition: width 0.4s ease;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; }
+    .skill-card { background: var(--bg); padding: 32px; position: relative; overflow: hidden; transition: all 0.3s; }
+    .skill-card::after { content: ''; position: absolute; bottom: 0; left: 0; height: 2px; width: 0; background: var(--ember); transition: width 0.4s ease; }
     .skill-card:hover::after { width: 100%; }
     .skill-card:hover { background: var(--bg3); }
-    .skill-icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-    }
-    .skill-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .skill-desc {
-      font-size: 0.85rem;
-      color: var(--ash);
-      line-height: 1.6;
-      font-weight: 300;
-    }
+    .skill-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .skill-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; }
+    .skill-desc { font-size: 0.85rem; color: var(--ash); line-height: 1.6; font-weight: 300; }
     .skill-bar-wrap { margin-top: 16px; }
-    .skill-bar-bg {
-      height: 2px;
-      background: var(--bg3);
-      width: 100%;
-    }
-    .skill-bar {
-      height: 2px;
-      background: linear-gradient(to right, var(--ember-dim), var(--ember));
-      width: 0;
-      transition: width 1.2s ease;
-    }
-
-    /* ABOUT / JOURNEY */
+    .skill-bar-bg { height: 2px; background: var(--bg3); width: 100%; }
+    .skill-bar { height: 2px; background: linear-gradient(to right, var(--ember-dim), var(--ember)); width: 0; transition: width 1.2s ease; }
     #about { background: var(--bg); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-    .about-text p {
-      font-size: 1rem;
-      color: var(--ash);
-      line-height: 1.9;
-      margin-bottom: 20px;
-      font-weight: 300;
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .about-text p { font-size: 1rem; color: var(--ash); line-height: 1.9; margin-bottom: 20px; font-weight: 300; }
     .about-text p strong { color: var(--ember); font-weight: 500; }
     .about-text p em { color: var(--light); font-style: normal; }
     .timeline { position: relative; padding-left: 24px; }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 8px; bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--ember), transparent);
-    }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--ember), transparent); }
     .tl-item { position: relative; margin-bottom: 36px; }
-    .tl-dot {
-      position: absolute;
-      left: -28px;
-      top: 6px;
-      width: 8px; height: 8px;
-      background: var(--ember);
-      border-radius: 50%;
-      box-shadow: 0 0 12px var(--ember);
-    }
-    .tl-year {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ember);
-      letter-spacing: 2px;
-      margin-bottom: 4px;
-    }
-    .tl-title {
-      font-size: 0.95rem;
-      color: var(--white);
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-    .tl-desc {
-      font-size: 0.85rem;
-      color: var(--ash);
-      font-weight: 300;
-    }
-
-    /* EDUCATION */
+    .tl-dot { position: absolute; left: -28px; top: 6px; width: 8px; height: 8px; background: var(--ember); border-radius: 50%; box-shadow: 0 0 12px var(--ember); }
+    .tl-year { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ember); letter-spacing: 2px; margin-bottom: 4px; }
+    .tl-title { font-size: 0.95rem; color: var(--white); font-weight: 500; margin-bottom: 4px; }
+    .tl-desc { font-size: 0.85rem; color: var(--ash); font-weight: 300; }
     #education { background: var(--bg2); }
-    .edu-card {
-      background: var(--bg);
-      padding: 48px;
-      border-left: 3px solid var(--ember);
-      position: relative;
-      max-width: 700px;
-    }
-    .edu-degree {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .edu-school {
-      font-size: 0.9rem;
-      color: var(--ember);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      font-family: 'DM Mono', monospace;
-    }
-    .edu-desc {
-      font-size: 0.9rem;
-      color: var(--ash);
-      line-height: 1.7;
-      font-weight: 300;
-    }
-    .edu-year {
-      position: absolute;
-      top: 48px; right: 48px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
-      color: rgba(201,106,74,0.1);
-      letter-spacing: 2px;
-      line-height: 1;
-    }
-
-    /* ACHIEVEMENTS */
+    .edu-card { background: var(--bg); padding: 48px; border-left: 3px solid var(--ember); position: relative; max-width: 700px; }
+    .edu-degree { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; }
+    .edu-school { font-size: 0.9rem; color: var(--ember); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; font-family: 'DM Mono', monospace; }
+    .edu-desc { font-size: 0.9rem; color: var(--ash); line-height: 1.7; font-weight: 300; }
+    .edu-year { position: absolute; top: 48px; right: 48px; font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: rgba(201,106,74,0.1); letter-spacing: 2px; line-height: 1; }
     #achievements { background: var(--bg); }
-    .ach-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2px;
-    }
-    .ach-card {
-      background: var(--bg2);
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s;
-    }
+    .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; }
+    .ach-card { background: var(--bg2); padding: 32px; position: relative; overflow: hidden; transition: all 0.3s; }
     .ach-card:hover { background: var(--bg3); }
-    .ach-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem;
-      color: rgba(201,106,74,0.12);
-      line-height: 1;
-      position: absolute;
-      top: 16px; right: 20px;
-      letter-spacing: 2px;
-    }
+    .ach-num { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: rgba(201,106,74,0.12); line-height: 1; position: absolute; top: 16px; right: 20px; letter-spacing: 2px; }
     .ach-icon { font-size: 1.5rem; margin-bottom: 16px; }
-    .ach-title {
-      font-size: 0.95rem;
-      color: var(--white);
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-    .ach-source {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--ember);
-      letter-spacing: 1px;
-    }
-
-    /* CONTACT */
-    #contact {
-      background: var(--bg2);
-      text-align: center;
-    }
+    .ach-title { font-size: 0.95rem; color: var(--white); font-weight: 500; margin-bottom: 6px; }
+    .ach-source { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--ember); letter-spacing: 1px; }
+    #contact { background: var(--bg2); text-align: center; }
     .contact-inner { max-width: 600px; margin: 0 auto; }
-    .contact-big {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 7vw, 6rem);
-      letter-spacing: 4px;
-      color: var(--white);
-      line-height: 0.95;
-      margin-bottom: 24px;
-    }
+    .contact-big { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 7vw, 6rem); letter-spacing: 4px; color: var(--white); line-height: 0.95; margin-bottom: 24px; }
     .contact-big span { color: var(--ember); }
-    .contact-sub {
-      font-size: 0.95rem;
-      color: var(--ash);
-      line-height: 1.8;
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: var(--bg);
-      border: 1px solid var(--bg3);
-      color: var(--ash);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      transition: all 0.2s;
-      font-family: 'DM Mono', monospace;
-    }
-    .contact-link:hover {
-      border-color: var(--ember);
-      color: var(--ember);
-      transform: translateY(-3px);
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--bg);
-      padding: 24px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(201,106,74,0.1);
-    }
-    footer .f-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
-      color: var(--ember);
-    }
-    footer .f-right {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ash);
-      letter-spacing: 1px;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeLeft {
-      from { opacity: 0; transform: translate(30px, -50%); }
-      to { opacity: 1; transform: translate(0, -50%); }
-    }
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-
-    .reveal {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      nav { padding: 20px 24px; }
-      .nav-links { display: none; }
-      .hero { padding: 100px 24px 60px; }
-      .hero-stats { display: none; }
-      section { padding: 70px 24px; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
-      .scroll-hint { left: 24px; }
-    }
+    .contact-sub { font-size: 0.95rem; color: var(--ash); line-height: 1.8; margin-bottom: 48px; font-weight: 300; }
+    .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .contact-link { display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--bg); border: 1px solid var(--bg3); color: var(--ash); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; transition: all 0.2s; font-family: 'DM Mono', monospace; }
+    .contact-link:hover { border-color: var(--ember); color: var(--ember); transform: translateY(-3px); }
+    footer { background: var(--bg); padding: 24px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,106,74,0.1); }
+    footer .f-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 3px; color: var(--ember); }
+    footer .f-right { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ash); letter-spacing: 1px; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeLeft { from { opacity: 0; transform: translate(30px, -50%); } to { opacity: 1; transform: translate(0, -50%); } }
+    @keyframes scrollPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } .hero { padding: 100px 24px 60px; } .hero-stats { display: none; } section { padding: 70px 24px; } .about-grid { grid-template-columns: 1fr; gap: 40px; } footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; } .scroll-hint { left: 24px; } }
   </style>
   <style>
-    /* LOCAL FILE SAFETY - all content always visible */
-    .reveal, .exp-wrapper, .skill-card, .about-text, .timeline,
-    .edu-card, .ach-card { opacity: 1 !important; transform: none !important; }
+    .reveal, .exp-wrapper, .skill-card, .about-text, .timeline, .edu-card, .ach-card { opacity: 1 !important; transform: none !important; }
   </style>
-
-  <!-- Structured Data: Person schema for Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Prapuljain A S",
     "jobTitle": "Software Quality Engineer",
-    "description": "Software Quality Engineer with 3 years of ServiceNow ITSM expertise, Playwright automation, and AI-driven QA.",
+    "description": "Software Quality Engineer with 3 years of ServiceNow ITSM expertise, Playwright automation, Azure DevOps CI/CD pipelines, and AI-driven QA.",
     "url": "https://prapuljain.github.io",
     "email": "prapuljainas@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://linkedin.com/in/prapuljain",
-      "https://github.com/prapuljain"
-    ],
-    "knowsAbout": ["ServiceNow", "Quality Engineering", "Playwright", "ATF", "API Testing", "Test Automation", "Now Assist", "ITSM"]
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+    "sameAs": ["https://linkedin.com/in/prapuljain", "https://github.com/prapuljain"],
+    "knowsAbout": ["ServiceNow", "Quality Engineering", "Playwright", "ATF", "API Testing", "Test Automation", "Now Assist", "ITSM", "Azure DevOps", "CI/CD", "GitHub", "UAT Testing", "Smoke Testing"]
   }
   </script>
 </head>
 <body>
 <a href="#experience" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
+<header>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">PRAPULJAIN A S</div>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">Journey</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+<main id="main-content">
 
-  <!-- NAV -->
-  <header>
-  <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-logo">PRAPULJAIN A S</div>
-    <div class="nav-links">
-      <a href="#experience" aria-label="Go to Work Experience section">Experience</a>
-      <a href="#skills" aria-label="Go to Skills section">Skills</a>
-      <a href="#about" aria-label="Go to Career Journey section">Journey</a>
-      <a href="#education" aria-label="Go to Education section">Education</a>
-      <a href="#contact" aria-label="Go to Contact section">Contact</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Quality Engineer · CI/CD · AI-Driven Automation · Vibe Coder</div>
+    <h1>PRAPULJAIN<br/><span>A S</span></h1>
+    <p class="hero-desc">
+      <strong>3 years</strong> of ServiceNow QA — from manual testing to building a <strong>Playwright automation framework</strong> and <strong>Azure DevOps CI/CD pipelines</strong> for REST API testing and RITM creation.<br/><br/>
+      A <strong>Vibe Coder</strong> — using AI to automate the work that used to take hours. <em>Validated 30+ APIs. Automated 120+ AI prompts. Deployed on GitHub. Ships things.</em>
+    </p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn-ember">View Experience</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
     </div>
-  </nav>
-  </header>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Years QA</div></div>
+    <div class="stat"><div class="stat-num">30+</div><div class="stat-label">APIs Validated</div></div>
+    <div class="stat"><div class="stat-num">120+</div><div class="stat-label">AI Prompts Automated</div></div>
+    <div class="stat"><div class="stat-num">40+</div><div class="stat-label">ATF Test Cases</div></div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>SCROLL TO EXPLORE</div>
+</section>
 
-  <main id="main-content">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-line"></div>
-    <div class="hero-content">
-      <div class="hero-tag">Quality Engineer · AI-Driven Automation · Vibe Coder</div>
-      <h1>PRAPULJAIN<br/><span>A S</span></h1>
-      <p class="hero-desc">
-        <strong>3 years</strong> of ServiceNow QA — from manual testing to building a <strong>Playwright automation framework</strong> for Teams-ServiceNow Now Assist integration.<br/><br/>
-        A <strong>Vibe Coder</strong> — using AI to automate the work that used to take hours. <em>Validated 30+ APIs. Built real automation. Ships things.</em>
-      </p>
-      <div class="hero-btns">
-        <a href="#experience" class="btn-ember" aria-label="View my work experience">View Experience</a>
-        <a href="#contact" class="btn-ghost" aria-label="Go to contact section">Get In Touch</a>
-      </div>
+<!-- EXPERIENCE -->
+<section id="experience" aria-label="Work Experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">WORK <span>EXPERIENCE</span></h2>
+  <div class="exp-wrapper reveal">
+    <div class="exp-timeline-col" role="tablist" aria-label="Work experience timeline">
+      <div class="exp-timeline-line"></div>
+      <button class="exp-tl-entry active" onclick="switchExp(0,this)" aria-selected="true" role="tab" aria-controls="exp-0" tabindex="0">
+        <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+        <div class="exp-tl-info"><div class="exp-tl-year">2025 — NOW</div><div class="exp-tl-shortrole">Quality Engineer</div></div>
+      </button>
+      <button class="exp-tl-entry" onclick="switchExp(1,this)" aria-selected="false" role="tab" aria-controls="exp-1" tabindex="0">
+        <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+        <div class="exp-tl-info"><div class="exp-tl-year">2023 — 2025</div><div class="exp-tl-shortrole">Assoc. Quality Engineer</div></div>
+      </button>
+      <button class="exp-tl-entry" onclick="switchExp(2,this)" aria-selected="false" role="tab" aria-controls="exp-2" tabindex="0">
+        <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
+        <div class="exp-tl-info"><div class="exp-tl-year">2023</div><div class="exp-tl-shortrole">QA Intern</div></div>
+      </button>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Years QA</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">30+</div>
-        <div class="stat-label">APIs Validated</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">120+</div>
-        <div class="stat-label">AI Prompts Automated</div>
-      </div>
-    </div>
-    <div class="scroll-hint">
-      <div class="scroll-line"></div>
-      SCROLL TO EXPLORE
-    </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" aria-label="Work Experience">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">WORK <span>EXPERIENCE</span></h2>
-
-    <div class="exp-wrapper reveal">
-      <!-- Left: Timeline Nav -->
-      <div class="exp-timeline-col" role="tablist" aria-label="Work experience timeline">
-        <div class="exp-timeline-line"></div>
-
-        <button class="exp-tl-entry active" onclick="switchExp(0, this)" aria-selected="true" role="tab" aria-controls="exp-0" tabindex="0">
-          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
-          <div class="exp-tl-info">
-            <div class="exp-tl-year">2025 — NOW</div>
-            <div class="exp-tl-shortrole">Quality Engineer</div>
+    <div class="exp-content-col">
+      <!-- Panel 0 -->
+      <div class="exp-panel active" id="exp-0" role="tabpanel">
+        <article class="exp-panel-inner">
+          <div class="exp-panel-top">
+            <h3 class="exp-role">Software Quality Engineer</h3>
+            <div class="exp-badge promoted">⬆ Promoted</div>
           </div>
-        </button>
-
-        <button class="exp-tl-entry" onclick="switchExp(1, this)" aria-selected="false" role="tab" aria-controls="exp-1" tabindex="0">
-          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
-          <div class="exp-tl-info">
-            <div class="exp-tl-year">2023 — 2025</div>
-            <div class="exp-tl-shortrole">Assoc. Quality Engineer</div>
+          <div class="exp-meta">
+            <div class="exp-company-name">Wolters Kluwer</div>
+            <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+            <div class="exp-date">OCT 2025 — PRESENT</div>
           </div>
-        </button>
-
-        <button class="exp-tl-entry" onclick="switchExp(2, this)" aria-selected="false" role="tab" aria-controls="exp-2" tabindex="0">
-          <div class="exp-tl-dot-wrap"><div class="exp-tl-dot"></div></div>
-          <div class="exp-tl-info">
-            <div class="exp-tl-year">2023</div>
-            <div class="exp-tl-shortrole">QA Intern</div>
+          <div class="exp-divider"></div>
+          <ul class="exp-bullets">
+            <li>Led quality engineering for <strong>ServiceNow AI / Virtual Agent (Now Assist) bot</strong> — 20+ dialog flows covering P3/P4 incident creation, RITM creation, status tracking, KB answer relevance, negative paths, and fallback behavior.</li>
+            <li>Designed and executed a <strong>Playwright (Python) automation framework</strong> for the Teams-ServiceNow Now Assist integration — automates login, chat interaction, fires 120+ prompts, captures response times, screenshots every step, and exports results to CSV for performance benchmarking across releases.</li>
+            <li><strong>Built and maintained Azure DevOps YAML pipelines</strong> for automated REST API testing and RITM creation via the Change Enablement API — handling inter-step variable passing (isOutput=true), custom token authentication, and env: block variable mapping.</li>
+            <li>Validated <strong>30+ ServiceNow API endpoints</strong> using Postman — UAT, Smoke, Integration, and API testing across authentication, headers, JSON payloads, and error handling, with AI-assisted script generation.</li>
+            <li>Used <strong>GitHub for version control</strong> — structured branching, commits, and pull requests for test automation repositories; deployed personal portfolio via GitHub Pages.</li>
+            <li>Used <strong>AI co-pilots (Claude, GitHub Copilot, Rovo)</strong> for test case generation, defect triage, automation scripting, and pipeline YAML authoring — reducing test authoring time across sprint cycles.</li>
+            <li>Built and maintained <strong>ATF regression & smoke suites</strong> — 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</li>
+            <li>Executed <strong>3 ServiceNow upgrade testing cycles</strong>; secured UAT sign-offs with detailed Jira traceability and deployment sanity verification.</li>
+          </ul>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Playwright</span>
+            <span class="exp-tag">Azure DevOps</span>
+            <span class="exp-tag">CI/CD Pipelines</span>
+            <span class="exp-tag">GitHub</span>
+            <span class="exp-tag">Now Assist</span>
+            <span class="exp-tag">UAT / Smoke</span>
+            <span class="exp-tag">30+ APIs</span>
+            <span class="exp-tag">GitHub Copilot</span>
+            <span class="exp-tag">ATF</span>
+            <span class="exp-tag">Claude AI</span>
           </div>
-        </button>
+        </article>
       </div>
 
-      <!-- Right: Content Panels -->
-      <div class="exp-content-col">
+      <!-- Panel 1 -->
+      <div class="exp-panel" id="exp-1" role="tabpanel">
+        <article class="exp-panel-inner">
+          <div class="exp-panel-top">
+            <h3 class="exp-role">Associate Quality Engineer</h3>
+            <div class="exp-badge">2 Years</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-company-name">Wolters Kluwer</div>
+            <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+            <div class="exp-date">AUG 2023 — OCT 2025</div>
+          </div>
+          <div class="exp-divider"></div>
+          <ul class="exp-bullets">
+            <li>Quality Engineer for <strong>Jira ↔ ServiceNow integration</strong> via IIB — validated field mappings, workflow triggers, and sync across Incident and Request for 2 major integration projects.</li>
+            <li>Used <strong>Postman for REST API-level validation</strong> of ServiceNow endpoints — authentication, headers, query parameters, and error handling for integrations and catalog items.</li>
+            <li>Applied <strong>ATF to automate repetitive checks</strong> on core forms, SLAs, and custom catalog items, reducing manual regression effort by ~35% across release cycles.</li>
+            <li>Executed <strong>UAT, Smoke, and Regression testing</strong> with structured data preparation, step-by-step validations, and consistent evidence capture for auditability.</li>
+            <li>Coordinated UAT with stakeholders; led deployment sanity and post-release checks; logged defects in Jira with reproducible steps and artefacts.</li>
+          </ul>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Postman</span>
+            <span class="exp-tag">REST API Testing</span>
+            <span class="exp-tag">UAT Testing</span>
+            <span class="exp-tag">Smoke Testing</span>
+            <span class="exp-tag">IIB Integration</span>
+            <span class="exp-tag">ATF</span>
+            <span class="exp-tag">ITSM</span>
+          </div>
+        </article>
+      </div>
 
-        <!-- Panel 0 -->
-        <div class="exp-panel active" id="exp-0" role="tabpanel" aria-labelledby="tab-0">
-          <article class="exp-panel-inner" aria-label="Software Quality Engineer at Wolters Kluwer">
-            <div class="exp-panel-top">
-              <h3 class="exp-role">Software Quality Engineer</h3>
-              <div class="exp-badge promoted">⬆ Promoted</div>
-            </div>
-            <div class="exp-meta">
-              <div class="exp-company-name">Wolters Kluwer</div>
-              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
-              <div class="exp-date">OCT 2025 — PRESENT</div>
-            </div>
-            <div class="exp-divider"></div>
-            <ul class="exp-bullets">
-              <li>Led quality engineering for <strong>ServiceNow AI / Virtual Agent (Now Assist) bot</strong> — 20+ dialog flows covering P3/P4 incident creation, RITM creation, status tracking, KB answer relevance, negative paths, and fallback behavior.</li>
-              <li>Designed and executed a <strong>Playwright (Python) automation framework</strong> for the Teams-ServiceNow Now Assist integration — automates login, chat interaction, fires 120+ prompts, captures response times, screenshots every step, and exports results to CSV for performance benchmarking across releases.</li>
-              <li>Validated <strong>30+ ServiceNow API endpoints</strong> using Postman with AI-assisted validation — used ChatGPT and Claude AI to generate edge case scenarios, assertion logic, and test scripts across authentication, headers, JSON payloads, and error handling.</li>
-              <li>Used <strong>GitHub Copilot and Rovo (Jira)</strong> as AI co-pilots for test case generation, defect triage, and automation scripting — reducing test authoring time across sprint cycles.</li>
-              <li>Built and maintained <strong>ATF regression & smoke suites</strong> — 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</li>
-              <li>Executed <strong>3 ServiceNow upgrade testing cycles</strong> and secured UAT sign-offs with detailed Jira traceability and deployment sanity verification.</li>
-            </ul>
-            <div class="exp-tag-row">
-              <span class="exp-tag">Playwright</span>
-              <span class="exp-tag">Now Assist</span>
-              <span class="exp-tag">30+ APIs</span>
-              <span class="exp-tag">GitHub Copilot</span>
-              <span class="exp-tag">Rovo</span>
-              <span class="exp-tag">ATF</span>
-              <span class="exp-tag">ChatGPT</span>
-              <span class="exp-tag">Claude AI</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Panel 1 -->
-        <div class="exp-panel" id="exp-1" role="tabpanel" aria-labelledby="tab-1">
-          <article class="exp-panel-inner" aria-label="Associate Quality Engineer at Wolters Kluwer">
-            <div class="exp-panel-top">
-              <h3 class="exp-role">Associate Quality Engineer</h3>
-              <div class="exp-badge">2 Years</div>
-            </div>
-            <div class="exp-meta">
-              <div class="exp-company-name">Wolters Kluwer</div>
-              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
-              <div class="exp-date">AUG 2023 — OCT 2025</div>
-            </div>
-            <div class="exp-divider"></div>
-            <ul class="exp-bullets">
-              <li>Quality Engineer for <strong>Jira ↔ ServiceNow integration</strong> via IIB — validated field mappings, workflow triggers, and sync across Incident and Request for 2 major integration projects.</li>
-              <li>Used <strong>Postman for API-level validation</strong> of ServiceNow endpoints — authentication, headers, query parameters, and error handling for integrations and catalog items.</li>
-              <li>Applied <strong>ATF to automate repetitive checks</strong> on core forms, SLAs, and custom catalog items, reducing manual regression effort by ~35% across release cycles.</li>
-              <li>Designed structured <strong>test suites</strong> with clear data preparation, step-by-step validations, and consistent evidence capture for auditability.</li>
-              <li>Coordinated UAT with stakeholders; led deployment sanity and post-release checks; logged defects in Jira with reproducible steps and artefacts.</li>
-            </ul>
-            <div class="exp-tag-row">
-              <span class="exp-tag">Postman</span>
-              <span class="exp-tag">API Testing</span>
-              <span class="exp-tag">IIB Integration</span>
-              <span class="exp-tag">ATF</span>
-              <span class="exp-tag">ITSM</span>
-              <span class="exp-tag">UAT</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Panel 2 -->
-        <div class="exp-panel" id="exp-2" role="tabpanel" aria-labelledby="tab-2">
-          <article class="exp-panel-inner" aria-label="QA Intern at Wolters Kluwer">
-            <div class="exp-panel-top">
-              <h3 class="exp-role">Associate Quality Engineer — Intern</h3>
-              <div class="exp-badge">Where It Started</div>
-            </div>
-            <div class="exp-meta">
-              <div class="exp-company-name">Wolters Kluwer</div>
-              <div class="exp-location">📍 Chennai, Tamil Nadu</div>
-              <div class="exp-date">MAR 2023 — AUG 2023</div>
-            </div>
-            <div class="exp-divider"></div>
-            <ul class="exp-bullets">
-              <li>Created and managed <strong>test cases for ServiceNow workflows</strong> with strong documentation standards and clear traceability.</li>
-              <li>Learned test case organization, traceability, and <strong>documentation best practices</strong> in an enterprise environment.</li>
-              <li>Gained foundational knowledge of <strong>ServiceNow QA</strong> including ITSM and ATF — the base of everything that followed.</li>
-            </ul>
-            <div class="exp-tag-row">
-              <span class="exp-tag">Test Cases</span>
-              <span class="exp-tag">Documentation</span>
-              <span class="exp-tag">ServiceNow</span>
-              <span class="exp-tag">ITSM Basics</span>
-            </div>
-          </article>
-        </div>
-
+      <!-- Panel 2 -->
+      <div class="exp-panel" id="exp-2" role="tabpanel">
+        <article class="exp-panel-inner">
+          <div class="exp-panel-top">
+            <h3 class="exp-role">Associate Quality Engineer — Intern</h3>
+            <div class="exp-badge">Where It Started</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-company-name">Wolters Kluwer</div>
+            <div class="exp-location">📍 Chennai, Tamil Nadu</div>
+            <div class="exp-date">MAR 2023 — AUG 2023</div>
+          </div>
+          <div class="exp-divider"></div>
+          <ul class="exp-bullets">
+            <li>Created and managed <strong>test cases for ServiceNow workflows</strong> with strong documentation standards and clear traceability.</li>
+            <li>Learned test case organization, traceability, and <strong>documentation best practices</strong> in an enterprise environment.</li>
+            <li>Gained foundational knowledge of <strong>ServiceNow QA</strong> including ITSM and ATF — the base of everything that followed.</li>
+          </ul>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Test Cases</span>
+            <span class="exp-tag">Documentation</span>
+            <span class="exp-tag">ServiceNow</span>
+            <span class="exp-tag">ITSM Basics</span>
+          </div>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills" aria-label="Skills and Technologies">
-    <div class="section-label">What I Do</div>
-    <h2 class="section-title">AUTOMATION & <span>QA SKILLS</span></h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎭</div>
-        <h3 class="skill-name">Playwright Automation</h3>
-        <div class="skill-desc">Built a Python Playwright framework for Teams-ServiceNow Now Assist — automates login, chat, 120+ AI prompts, records response times, screenshots, and exports to CSV for performance analysis.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="75"></div></div></div>
+<!-- SKILLS -->
+<section id="skills" aria-label="Skills and Technologies">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">AUTOMATION & <span>QA SKILLS</span></h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🎭</div>
+      <h3 class="skill-name">Playwright Automation</h3>
+      <div class="skill-desc">Built a Python Playwright framework for Teams-ServiceNow Now Assist — automates login, chat, 120+ AI prompts, records response times, screenshots, and exports to CSV for performance analysis.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="75"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">⚡</div>
+      <h3 class="skill-name">ATF & Regression Automation</h3>
+      <div class="skill-desc">Micro-certified. Built ATF suites covering 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🔌</div>
+      <h3 class="skill-name">Postman & API Testing</h3>
+      <div class="skill-desc">Validated 30+ ServiceNow API endpoints — UAT, Smoke, Integration, and REST API testing. Uses AI to generate test scripts, edge cases, and assertion logic inside Postman collections.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🚀</div>
+      <h3 class="skill-name">Azure DevOps CI/CD</h3>
+      <div class="skill-desc">Built and maintained YAML pipelines for automated REST API testing and RITM creation via Change Enablement API. Handles inter-step variable passing, custom token auth, and env: block mapping.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="70"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🐙</div>
+      <h3 class="skill-name">GitHub & Version Control</h3>
+      <div class="skill-desc">Structured branching, commits, and pull requests for test automation repos. Deployed personal portfolio at prapuljain.github.io using GitHub Pages — zero prior web dev experience.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="65"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🧪</div>
+      <h3 class="skill-name">Testing Methods</h3>
+      <div class="skill-desc">Smoke Testing, UAT, Regression, Integration, Sanity, Performance, and End-to-End testing — applied across ServiceNow ITSM modules, APIs, and AI bot validation flows.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="90"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🤖</div>
+      <h3 class="skill-name">Virtual Agent / Now Assist QA</h3>
+      <div class="skill-desc">Led QA for ServiceNow Now Assist bot — 20+ dialog flows, incident creation, status tracking, KB validation, catalog suggestions, negative paths and fallback testing.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🎯</div>
+      <h3 class="skill-name">AI-Driven QA</h3>
+      <div class="skill-desc">Uses Claude, GitHub Copilot, Rovo, ChatGPT, and Gemini to build automation tools, generate test cases, author YAML pipelines, and triage defects — turning hours of manual work into minutes.</div>
+      <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="80"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / JOURNEY -->
+<section id="about" aria-label="About and Career Journey">
+  <div class="section-label">Story</div>
+  <h2 class="section-title">MY <span>JOURNEY</span></h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>Started as a <strong>Manual QA Tester</strong> — writing test cases, validating workflows, finding bugs before users did. Good work. But slow and repetitive.</p>
+      <p>The shift happened when I built a <strong>Playwright (Python) framework</strong> for the Teams-ServiceNow Now Assist integration — automating login, chat interaction, firing 120+ AI prompts, capturing response times, screenshots, and exporting everything to CSV. What used to take hours of manual testing now runs automatically.</p>
+      <p>Then came <strong>Azure DevOps CI/CD pipelines</strong> — YAML-based automation for REST API testing and RITM creation. Real pipeline work: variable passing, token auth, environment config. Not just theory.</p>
+      <p>I also used <strong>AI to validate 30+ APIs in Postman</strong> — UAT, Smoke, Integration testing with scripts generated faster than writing manually. The pattern is simple: <em>3 years of knowing exactly what needs testing, plus AI and CI/CD to build the tools that do it.</em></p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">MAR 2023</div>
+        <div class="tl-title">Started as QA Intern</div>
+        <div class="tl-desc">First step into enterprise QA — manual testing, documentation, ITSM fundamentals.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚡</div>
-        <h3 class="skill-name">ATF & Regression Automation</h3>
-        <div class="skill-desc">Micro-certified. Built ATF suites covering 40+ test cases across Incident, Request, Change, and Problem with reusable steps and UI policy validations.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">AUG 2023</div>
+        <div class="tl-title">Associate Quality Engineer</div>
+        <div class="tl-desc">API testing with Postman, ATF automation, UAT & Smoke testing, Jira defect management.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔌</div>
-        <h3 class="skill-name">Postman & API Testing</h3>
-        <div class="skill-desc">Validated 30+ ServiceNow API endpoints. Uses AI to generate test scripts, edge cases, and validation logic inside Postman collections.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">OCT 2025</div>
+        <div class="tl-title">Promoted → Quality Engineer</div>
+        <div class="tl-desc">Led QA for ServiceNow AI Virtual Agent bot — first hands-on experience testing real AI in production.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🤖</div>
-        <h3 class="skill-name">Virtual Agent / Now Assist QA</h3>
-        <div class="skill-desc">Led QA for ServiceNow Now Assist bot — 20+ dialog flows, incident creation, status tracking, KB validation, catalog suggestions, negative paths and fallback testing.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2026</div>
+        <div class="tl-title">CI/CD + GitHub + AI Builder</div>
+        <div class="tl-desc">Built Azure DevOps pipelines for automated API testing. Deployed portfolio on GitHub Pages. Using AI co-pilots to automate everything.</div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🐍</div>
-        <h3 class="skill-name">Python Fundamentals</h3>
-        <div class="skill-desc">Variables, loops, functions, conditionals — applied directly to real automation scripts. Not just tutorials — used in the Playwright framework that runs in production testing.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="50"></div></div></div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎯</div>
-        <h3 class="skill-name">Vibe Coder</h3>
-        <div class="skill-desc">Uses AI as a co-pilot to build automation tools. Designed a framework running 120+ automated prompts for Now Assist performance testing. Built and deployed portfolio website in under 10 minutes using AI.</div>
-        <div class="skill-bar-wrap"><div class="skill-bar-bg"><div class="skill-bar" data-width="40"></div></div></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">NEXT</div>
+        <div class="tl-title">Ship AI Automation Tools 🚀</div>
+        <div class="tl-desc">Building agents that make day-to-day QA work effortless — for teams, businesses, and beyond.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT / JOURNEY -->
-  <section id="about" aria-label="About and Career Journey">
-    <div class="section-label">Story</div>
-    <h2 class="section-title">MY <span>JOURNEY</span></h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>Started as a <strong>Manual QA Tester</strong> — writing test cases, validating workflows, finding bugs before users did. Good work. But slow and repetitive.</p>
-        <p>The shift happened when I built a <strong>Playwright (Python) framework</strong> for the Teams-ServiceNow Now Assist integration — automating login, chat interaction, firing 120+ AI prompts, capturing response times, screenshots, and exporting everything to CSV. What used to take hours of manual testing now runs automatically.</p>
-        <p>I also used <strong>AI to validate 30+ APIs in Postman</strong> — generating edge cases and scripts faster than writing them manually. The pattern is simple: <em>3 years of knowing exactly what needs testing, plus AI to build the tools that do it.</em></p>
-      </div>
-      <div class="timeline reveal">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">MAR 2023</div>
-          <div class="tl-title">Started as QA Intern</div>
-          <div class="tl-desc">First step into enterprise QA — manual testing, documentation, ITSM fundamentals.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">AUG 2023</div>
-          <div class="tl-title">Associate Quality Engineer</div>
-          <div class="tl-desc">API testing with Postman, ATF automation, Jira defect management across real projects.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">OCT 2025</div>
-          <div class="tl-title">Promoted → Quality Engineer</div>
-          <div class="tl-desc">Led QA for ServiceNow AI Virtual Agent bot — first hands-on experience testing real AI in production.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">MAR 2026</div>
-          <div class="tl-title">Manual Tester → AI Builder</div>
-          <div class="tl-desc">Started building AI agents with Claude — automating the tasks that once took hours of manual effort.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">NEXT</div>
-          <div class="tl-title">Ship AI Automation Tools 🚀</div>
-          <div class="tl-desc">Building agents that make day-to-day work effortless — for QA teams, businesses, and beyond.</div>
-        </div>
-      </div>
+<!-- EDUCATION -->
+<section id="education" aria-label="Education and Certifications">
+  <div class="section-label">Academic</div>
+  <h2 class="section-title">EDUCATION & <span>CERTS</span></h2>
+  <div class="edu-card reveal">
+    <div class="edu-year">2023</div>
+    <div class="edu-degree">Bachelor of Engineering</div>
+    <div class="edu-school">Electronics & Instrumentation · Siddaganga Institute of Technology</div>
+    <div class="edu-desc">Completed BE in 2023 with a strong focus on IoT projects — including a smart foot pressure monitoring system for patient rehabilitation and an Arecanut plucking robot for agricultural automation. Built a foundation in systems thinking that directly applies to software testing and automation today.</div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-label">Recognition</div>
+  <div class="section-title">ACHIEVEMENTS & <span>CERTS</span></div>
+  <div class="ach-grid">
+    <div class="ach-card reveal">
+      <div class="ach-num">01</div>
+      <div class="ach-icon">🏆</div>
+      <div class="ach-title">ServiceNow Certified System Administrator (CSA)</div>
+      <div class="ach-source">ServiceNow · April 2026</div>
     </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" aria-label="Education and Certifications">
-    <div class="section-label">Academic</div>
-    <h2 class="section-title">EDUCATION & <span>CERTS</span></h2>
-    <div class="edu-card reveal">
-      <div class="edu-year">2023</div>
-      <div class="edu-degree">Bachelor of Engineering</div>
-      <div class="edu-school">Electronics & Instrumentation · Siddaganga Institute of Technology</div>
-      <div class="edu-desc">Completed BE in 2023 with a strong focus on IoT projects — including a smart foot pressure monitoring system for patient rehabilitation and an Arecanut plucking robot for agricultural automation. Built a foundation in systems thinking that directly applies to software testing and automation today.</div>
+    <div class="ach-card reveal">
+      <div class="ach-num">02</div>
+      <div class="ach-icon">⚡</div>
+      <div class="ach-title">ServiceNow Micro-Certification — ATF</div>
+      <div class="ach-source">ServiceNow University</div>
     </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements">
-    <div class="section-label">Recognition</div>
-    <div class="section-title">ACHIEVEMENTS & <span>CERTS</span></div>
-    <div class="ach-grid">
-      <div class="ach-card reveal">
-        <div class="ach-num">01</div>
-        <div class="ach-icon">🏆</div>
-        <div class="ach-title">ServiceNow Micro-Certification — ATF</div>
-        <div class="ach-source">ServiceNow University</div>
-      </div>
-      <div class="ach-card reveal">
-        <div class="ach-num">02</div>
-        <div class="ach-icon">📚</div>
-        <div class="ach-title">Foundational Courses — ServiceNow & ITSM</div>
-        <div class="ach-source">LinkedIn Learning</div>
-      </div>
-      <div class="ach-card reveal">
-        <div class="ach-num">03</div>
-        <div class="ach-icon">🤖</div>
-        <div class="ach-title">Built First Website & GitHub Profile</div>
-        <div class="ach-source">Self-taught · March 2026</div>
-      </div>
-      <div class="ach-card reveal">
-        <div class="ach-num">04</div>
-        <div class="ach-icon">⬆️</div>
-        <div class="ach-title">Promoted — Associate to Quality Engineer</div>
-        <div class="ach-source">Wolters Kluwer · October 2025</div>
-      </div>
+    <div class="ach-card reveal">
+      <div class="ach-num">03</div>
+      <div class="ach-icon">🚀</div>
+      <div class="ach-title">Azure DevOps CI/CD Pipeline — Built & Deployed</div>
+      <div class="ach-source">Self-built · 2026 · REST API Automation</div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" aria-label="Contact Information">
-    <div class="contact-inner">
-      <div class="section-label" style="justify-content:center">Let's Connect</div>
-      
-      <p class="contact-sub reveal">3 years in QA. Now building AI agents that automate the boring stuff. Whether it's a collaboration, opportunity, or just a conversation about making work smarter — I'm in.</p>
-      <div class="contact-links reveal">
-        <a href="/cdn-cgi/l/email-protection#a6d6d4c7d6d3caccc7cfc8c7d5e6c1cbc7cfca88c5c9cb" class="contact-link" aria-label="Send email to Prapuljain">📧 <span class="__cf_email__" data-cfemail="c4b4b6a5b4b1a8aea5adaaa5b784a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a>
-        <a href="https://github.com/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Prapuljain GitHub profile">🐙 github.com/prapuljain</a>
-        <a href="https://linkedin.com/in/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Prapuljain LinkedIn profile">💼 linkedin.com/in/prapuljain</a>
-        <a href="tel:+917026005185" class="contact-link">📱 +91 70260 05185</a>
-      </div>
+    <div class="ach-card reveal">
+      <div class="ach-num">04</div>
+      <div class="ach-icon">🐙</div>
+      <div class="ach-title">GitHub Portfolio Deployed — prapuljain.github.io</div>
+      <div class="ach-source">GitHub Pages · Self-taught · 2026</div>
     </div>
-  </section>
+    <div class="ach-card reveal">
+      <div class="ach-num">05</div>
+      <div class="ach-icon">📚</div>
+      <div class="ach-title">Foundational Courses — ServiceNow & ITSM</div>
+      <div class="ach-source">LinkedIn Learning · ServiceNow University</div>
+    </div>
+    <div class="ach-card reveal">
+      <div class="ach-num">06</div>
+      <div class="ach-icon">⬆️</div>
+      <div class="ach-title">Promoted — Associate to Quality Engineer</div>
+      <div class="ach-source">Wolters Kluwer · October 2025</div>
+    </div>
+  </div>
+</section>
 
-  </main>
-  <!-- FOOTER -->
-  <footer>
-    <div class="f-logo">PRAPUL JAIN A S</div>
-    <div class="f-right">BENGALURU, INDIA · SOFTWARE QUALITY ENGINEER · prapuljain.github.io</div>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact Information">
+  <div class="contact-inner">
+    <div class="section-label" style="justify-content:center">Let's Connect</div>
+    <p class="contact-sub reveal">3 years in QA. CI/CD pipelines. AI-driven automation. Whether it's a collaboration, opportunity, or just a conversation about making work smarter — I'm in.</p>
+    <div class="contact-links reveal">
+      <a href="mailto:prapuljainas@gmail.com" class="contact-link">📧 prapuljainas@gmail.com</a>
+      <a href="https://github.com/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link">🐙 github.com/prapuljain</a>
+      <a href="https://linkedin.com/in/prapuljain" target="_blank" rel="noopener noreferrer" class="contact-link">💼 linkedin.com/in/prapuljain</a>
+      <a href="tel:+917026005185" class="contact-link">📱 +91 70260 05185</a>
+    </div>
+  </div>
+</section>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Experience tab switcher
-    function switchExp(index, el) {
-      document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.exp-tl-entry').forEach(e => {
-        e.classList.remove('active');
-        e.setAttribute('aria-selected', 'false');
-      });
-      document.getElementById('exp-' + index).classList.add('active');
-      el.classList.add('active');
-      el.setAttribute('aria-selected', 'true');
-    }
-    // Keyboard navigation for tabs
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.exp-tl-entry');
-      tabs.forEach((tab, i) => {
-        tab.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-            e.preventDefault();
-            const next = tabs[(i + 1) % tabs.length];
-            next.focus();
-            switchExp((i + 1) % tabs.length, next);
-          }
-          if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-            e.preventDefault();
-            const prev = tabs[(i - 1 + tabs.length) % tabs.length];
-            prev.focus();
-            switchExp((i - 1 + tabs.length) % tabs.length, prev);
-          }
-        });
+</main>
+
+<footer>
+  <div class="f-logo">PRAPUL JAIN A S</div>
+  <div class="f-right">BENGALURU, INDIA · SOFTWARE QUALITY ENGINEER · prapuljain.github.io</div>
+</footer>
+
+<script>
+  function switchExp(index, el) {
+    document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.exp-tl-entry').forEach(e => { e.classList.remove('active'); e.setAttribute('aria-selected','false'); });
+    document.getElementById('exp-' + index).classList.add('active');
+    el.classList.add('active');
+    el.setAttribute('aria-selected','true');
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.exp-tl-entry');
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); const next = tabs[(i+1)%tabs.length]; next.focus(); switchExp((i+1)%tabs.length, next); }
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); const prev = tabs[(i-1+tabs.length)%tabs.length]; prev.focus(); switchExp((i-1+tabs.length)%tabs.length, prev); }
       });
     });
-
-    // Custom cursor — only on non-touch devices
-    if (window.matchMedia('(pointer: fine)').matches) {
-      const cursor = document.getElementById('cursor');
-      const ring = document.getElementById('cursorRing');
-      let mx = 0, my = 0, rx = 0, ry = 0;
-      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
-      function animCursor() {
-        cursor.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
-        rx += (mx - rx) * 0.15;
-        ry += (my - ry) * 0.15;
-        ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
-        requestAnimationFrame(animCursor);
-      }
-      animCursor();
-    } else {
-      // Hide custom cursor on touch devices
-      document.getElementById('cursor').style.display = 'none';
-      document.getElementById('cursorRing').style.display = 'none';
-      document.body.style.cursor = 'auto';
+    document.querySelectorAll('.skill-bar').forEach(bar => {
+      bar.style.width = (bar.dataset.width || 0) + '%';
+    });
+  });
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; }, {passive:true});
+    function animCursor() {
+      cursor.style.transform = `translate(${mx-5}px,${my-5}px)`;
+      rx += (mx-rx)*0.15; ry += (my-ry)*0.15;
+      ring.style.transform = `translate(${rx-18}px,${ry-18}px)`;
+      requestAnimationFrame(animCursor);
     }
-
-    // All conten
+    animCursor();
+  } else {
+    document.getElementById('cursor').style.display='none';
+    document.getElementById('cursorRing').style.display='none';
+    document.body.style.cursor='auto';
+  }
+</script>
+</body>
+</html>
